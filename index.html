@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026保研夏令营 & 预推免信息追踪 · 外国语专业</title>
+<style>
+:root {
+  --bg: #0a0e14; --surface: #131820; --surface2: #181f2a; --border: #1e2a3a;
+  --primary: #39bae6; --secondary: #a37acc; --accent: #ff6b6b; --green: #2ecc71;
+  --orange: #e67e22; --yellow: #f1c40f; --text: #b3c7d6; --text-muted: #5c6e80;
+  --text-bright: #e6edf3; --radius: 10px; --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --glow: 0 0 20px rgba(57,186,230,0.25); --c985: #a37acc; --c211: #39bae6;
+  --c-lang: #2ecc71; --c-other: #5c6e80;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(57,186,230,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(57,186,230,.02) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0}
+.container{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:24px 20px 64px}
+
+.header{text-align:center;margin-bottom:28px}
+.header h1{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header .subtitle{color:var(--text-muted);font-size:.85rem;margin-top:4px}
+
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:1px solid transparent;transition:var(--transition);font-family:inherit}
+.btn-primary{background:linear-gradient(135deg,var(--primary),#1e88e5);color:#fff;box-shadow:0 0 16px rgba(57,186,230,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(57,186,230,.5)}
+.btn-outline{background:transparent;border-color:var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--primary);color:var(--text-bright)}
+.btn-sm{padding:5px 12px;font-size:.78rem}
+.btn-success{background:rgba(46,204,113,.12);border-color:rgba(46,204,113,.3);color:var(--green)}
+.btn-success:hover{background:rgba(46,204,113,.2)}
+.btn-warning{background:rgba(230,126,34,.12);border-color:rgba(230,126,34,.3);color:var(--orange)}
+.btn-warning:hover{background:rgba(230,126,34,.2)}
+
+.stats-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:20px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 20px;text-align:center;min-width:88px}
+.stat-card .num{font-size:1.4rem;font-weight:700;color:var(--text-bright)}
+.stat-card .lbl{font-size:.72rem;color:var(--text-muted)}
+.stat-card.active .num{color:var(--green)}
+.stat-card.urgent .num{color:var(--accent)}
+.stat-card.track .num{color:var(--primary)}
+.stat-card.offer .num{color:var(--yellow)}
+
+.filter-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px}
+.filter-bar select,.filter-bar input{padding:8px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--text-bright);font-size:.84rem;font-family:inherit;outline:none}
+.filter-bar select:focus,.filter-bar input:focus{border-color:var(--primary)}
+.filter-bar input{flex:1;min-width:160px}
+
+.tab-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;justify-content:center}
+.tab-btn{padding:7px 16px;border-radius:20px;font-size:.82rem;font-weight:500;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text-muted);transition:var(--transition);font-family:inherit}
+.tab-btn:hover{border-color:var(--primary);color:var(--text)}
+.tab-btn.active{background:rgba(57,186,230,.12);border-color:var(--primary);color:var(--primary);font-weight:600}
+.tab-count{display:inline-block;border-radius:10px;padding:1px 7px;font-size:.68rem;margin-left:2px;vertical-align:top;background:rgba(255,107,107,.15);color:var(--accent)}
+
+.last-refresh{font-size:.78rem;color:var(--text-muted);text-align:center;margin-bottom:20px}
+.last-refresh span{color:var(--primary);font-weight:600}
+
+.table-wrapper{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow-x:auto;max-height:60vh;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:1100px}
+thead{position:sticky;top:0;z-index:2}
+th{background:var(--surface2);color:var(--text-bright);font-weight:600;padding:10px 10px;text-align:left;border-bottom:2px solid var(--border);white-space:nowrap;font-size:.78rem}
+td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:hover td{background:rgba(57,186,230,.03)}
+td a{color:var(--primary);text-decoration:none;word-break:break-all}
+td a:hover{text-decoration:underline}
+
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:600;white-space:nowrap}
+.badge-active{background:rgba(46,204,113,.15);color:var(--green)}
+.badge-urgent{background:rgba(255,107,107,.12);color:var(--accent)}
+.badge-closed{background:rgba(92,110,128,.12);color:var(--text-muted)}
+.badge-upcoming{background:rgba(241,196,15,.12);color:var(--yellow)}
+.badge-summer{background:rgba(46,204,113,.12);color:var(--green)}
+.badge-pre{background:rgba(57,186,230,.12);color:var(--primary)}
+.badge-985{background:rgba(163,122,204,.15);color:var(--c985)}
+.badge-211{background:rgba(57,186,230,.15);color:var(--c211)}
+.badge-lang{background:rgba(46,204,113,.15);color:var(--c-lang)}
+.badge-verified{background:rgba(46,204,113,.15);color:var(--green);font-size:.65rem;padding:1px 5px}
+.badge-predicted{background:rgba(241,196,15,.12);color:var(--yellow);font-size:.65rem;padding:1px 5px}
+
+.track-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.6rem;font-weight:700;transition:var(--transition);margin:0 2px;color:var(--text-muted);font-family:inherit}
+.track-btn:hover{border-color:var(--primary)}
+.track-btn.on-applied{background:rgba(46,204,113,.15);border-color:var(--green);color:var(--green)}
+.track-btn.on-interview{background:rgba(57,186,230,.15);border-color:var(--primary);color:var(--primary)}
+.track-btn.on-offer{background:rgba(241,196,15,.2);border-color:var(--yellow);color:var(--yellow)}
+
+.pagination{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+.pagination button{padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:500;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);font-family:inherit;transition:var(--transition)}
+.pagination button:hover:not(:disabled){border-color:var(--primary);color:var(--text-bright)}
+.pagination button:disabled{opacity:.4;cursor:default}
+.pagination .page-info{color:var(--text-muted);font-size:.8rem}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;max-width:560px;width:90%;max-height:85vh;overflow-y:auto}
+.modal h3{color:var(--text-bright);margin-bottom:14px;font-size:1rem}
+.modal label{display:block;color:var(--text-muted);font-size:.78rem;margin:8px 0 3px}
+.modal input,.modal select,.modal textarea{width:100%;padding:7px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--text-bright);font-size:.84rem;font-family:inherit}
+.modal textarea{resize:vertical;min-height:45px}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+
+.report-view{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;max-width:900px;margin:0 auto}
+.report-view h2{color:var(--text-bright);margin-bottom:6px}
+.report-view .report-date{color:var(--primary);font-size:.9rem;margin-bottom:20px}
+.report-view .report-section{margin-bottom:20px}
+.report-view .report-section h4{color:var(--text-bright);margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)}
+.report-view .report-item{display:flex;justify-content:space-between;padding:5px 0;font-size:.84rem;border-bottom:1px solid rgba(30,42,58,.5)}
+.report-view .report-item .ri-left{flex:1}
+.report-view .report-item .ri-right{color:var(--text-muted);white-space:nowrap;margin-left:12px}
+.report-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
+
+.footer{text-align:center;margin-top:40px;font-size:.78rem;color:var(--text-muted)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.tab-content{animation:fadeUp .3s ease both}
+::selection{background:rgba(57,186,230,.25);color:var(--text-bright)}
+.table-wrapper::-webkit-scrollbar{width:5px;height:5px}
+.table-wrapper::-webkit-scrollbar-track{background:transparent}
+.table-wrapper::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+@media(max-width:768px){
+  .header h1{font-size:1.3rem}
+  .toolbar{flex-direction:column}
+  .stats-bar{gap:6px}
+  .stat-card{padding:8px 12px;min-width:60px}
+  .stat-card .num{font-size:1.1rem}
+  table{font-size:.72rem;min-width:800px}
+  th,td{padding:6px 8px}
+  .filter-bar{flex-direction:column}
+  .filter-bar input{width:100%}
+}
+@media print{
+  body{background:#fff;color:#000}
+  .toolbar,.tab-bar,.filter-bar,.pagination,.footer,.btn{display:none}
+  .table-wrapper{max-height:none;overflow:visible}
+  .report-view{display:block!important}
+  .table-wrapper{display:none}
+}
+</style>
+</head>
+<body>
+<div id="toast" style="display:none;position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:200;background:var(--primary);color:#fff;padding:10px 24px;border-radius:20px;font-size:.85rem;font-weight:600;box-shadow:0 4px 20px rgba(57,186,230,.4);transition:all .3s ease"></div>
+<div class="container">
+<header class="header">
+  <h1>2026 保研夏令营 & 预推免 信息追踪</h1>
+  <p class="subtitle">覆盖11大类 · 120+院校 · 外国语专业保研全方向 | 数据更新于 <span id="updateDate">--</span></p>
+</header>
+
+<div class="toolbar">
+  <button class="btn btn-primary" onclick="generateDailyReport()">🔮 生成今日汇总</button>
+  <button class="btn btn-outline" onclick="showTrackingSummary()">📊 追踪统计</button>
+  <button class="btn btn-outline" onclick="openAddModal()">➕ 添加信息</button>
+  <button class="btn btn-outline" onclick="exportCSV()">📥 导出CSV</button>
+  <button class="btn btn-outline btn-sm" onclick="exportJSON()">💾 备份JSON</button>
+  <button class="btn btn-outline btn-sm" onclick="document.getElementById('importFile').click()">📂 导入JSON</button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importJSON(event)">
+  <button class="btn btn-outline btn-sm" onclick="refreshPage()">🔄 刷新</button>
+  <button class="btn btn-outline btn-sm" onclick="resetData()">⚠️ 恢复默认</button>
+</div>
+
+<div class="stats-bar" id="statsBar"></div>
+
+<div class="filter-bar">
+  <select id="filterCategory" onchange="applyFilters()">
+    <option value="all">全部类别</option>
+  </select>
+  <select id="filterTier" onchange="applyFilters()">
+    <option value="all">全部层次</option>
+    <option value="985">985</option>
+    <option value="211">211</option>
+    <option value="language">外语类院校</option>
+  </select>
+  <select id="filterConfidence" onchange="applyFilters()">
+    <option value="all">全部可信度</option>
+    <option value="confirmed">已确认</option>
+    <option value="predicted">预测</option>
+  </select>
+  <input type="text" id="searchInput" placeholder="搜索学校、专业、关键词..." oninput="applyFilters()">
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="all" onclick="switchTab('all')">全部</button>
+  <button class="tab-btn" data-tab="active" onclick="switchTab('active')">报名中 <span class="tab-count" id="tabActiveCnt">0</span></button>
+  <button class="tab-btn" data-tab="urgent" onclick="switchTab('urgent')">即将截止 <span class="tab-count" id="tabUrgentCnt">0</span></button>
+  <button class="tab-btn" data-tab="today" onclick="switchTab('today')">今日关注</button>
+  <button class="tab-btn" data-tab="applied" onclick="switchTab('applied')">已申请 <span class="tab-count" id="tabAppliedCnt">0</span></button>
+  <button class="tab-btn" data-tab="interviewed" onclick="switchTab('interviewed')">已入面 <span class="tab-count" id="tabInterviewedCnt">0</span></button>
+  <button class="tab-btn" data-tab="offered" onclick="switchTab('offered')">已录取 <span class="tab-count" id="tabOfferedCnt">0</span></button>
+</div>
+
+<p class="last-refresh">最近刷新：<span id="lastRefreshTime">--</span> | 点击"生成今日汇总"获取当日报告</p>
+
+<div class="table-wrapper" id="tableWrapper">
+  <table>
+    <thead><tr>
+      <th>学校</th><th>学院</th><th>专业方向</th><th>类别</th><th>类型</th>
+      <th>报名截止</th><th>活动时间</th><th>状态</th><th>可信度</th>
+      <th style="width:110px">追踪</th><th>网址</th><th>备注</th>
+    </tr></thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<div class="pagination" id="pagination"></div>
+
+<div class="report-view" id="reportView"></div>
+
+<footer class="footer">
+  &copy; 2026 保研信息追踪 · 数据来源各大高校官网，建议核实后使用 · <span id="dataCount">0</span> 条记录
+  · <a href="javascript:void(0)" onclick="switchTab('all');document.getElementById('reportView').style.display='none';document.getElementById('tableWrapper').style.display='';document.getElementById('pagination').style.display=''" style="color:var(--primary)">返回表格</a>
+</footer>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3 id="modalTitle">添加招生信息</h3>
+    <label>学校名称 *</label>
+    <input type="text" id="mSchool" list="schoolList" placeholder="输入或选择学校">
+    <datalist id="schoolList"></datalist>
+    <label>学院/机构 *</label>
+    <input type="text" id="mCollege" placeholder="如：外国语学院">
+    <label>专业方向 *</label>
+    <input type="text" id="mMajor" placeholder="如：英语语言文学">
+    <label>类别 *</label>
+    <select id="mCategory"></select>
+    <label>类型 *</label>
+    <select id="mType"><option value="夏令营">夏令营</option><option value="预推免">预推免</option><option value="暑期学校">暑期学校</option></select>
+    <label>报名截止时间</label>
+    <input type="text" id="mDeadline" placeholder="如：2026年6月15日">
+    <label>活动/复试时间</label>
+    <input type="text" id="mEventDate" placeholder="如：2026年7月11日-12日">
+    <label>招生人数</label>
+    <input type="text" id="mQuota" placeholder="如：30人">
+    <label>状态</label>
+    <select id="mStatus"><option value="报名中">报名中</option><option value="即将截止">即将截止</option><option value="已截止">已截止</option><option value="即将发布">即将发布</option><option value="待发布">待发布</option></select>
+    <label>网址</label>
+    <input type="text" id="mUrl" placeholder="https://...">
+    <label>可信度</label>
+    <select id="mConfidence"><option value="predicted">预测</option><option value="confirmed">已确认</option></select>
+    <label>备注</label>
+    <textarea id="mNote" placeholder="其他备注信息..."></textarea>
+    <input type="hidden" id="mId" value="">
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="closeModal()">取消</button>
+      <button class="btn btn-primary" onclick="saveEntry()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tracking Summary Modal -->
+<div class="modal-overlay" id="trackModal">
+  <div class="modal" style="max-width:600px">
+    <h3>📊 申请追踪汇总</h3>
+    <div id="trackSummaryContent"></div>
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="document.getElementById('trackModal').classList.remove('show')">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ==================== CATEGORIES ====================
+const CATEGORIES = {
+  foreign_language: {label:'外国语学院/外国语言文学', color:'#39bae6', icon:'🌐'},
+  mti: {label:'翻译硕士（MTI）', color:'#2ecc71', icon:'📝'},
+  law_ilm: {label:'法律硕士（非法本）', color:'#ff6b6b', icon:'⚖️'},
+  journalism: {label:'新闻传播/国际新闻', color:'#f1c40f', icon:'📰'},
+  international_relations: {label:'国际关系/外交学', color:'#a37acc', icon:'🌍'},
+  area_studies: {label:'区域国别学', color:'#e67e22', icon:'🗺️'},
+  comparative_lit: {label:'比较文学与跨文化研究', color:'#1abc9c', icon:'📚'},
+  tcsol: {label:'汉语国际教育', color:'#3498db', icon:'🎓'},
+  education: {label:'教育学', color:'#9b59b6', icon:'📖'},
+  global_governance: {label:'国际组织/全球治理', color:'#e74c3c', icon:'🏛️'},
+  interdisciplinary: {label:'其他交叉学科', color:'#95a5a6', icon:'🔬'}
+};
+
+// ==================== SCHOOL DATABASE ====================
+// URLs verified with WebFetch where marked verified:true
+const SCHOOLS = [
+  // === 985 (39所) ===
+  {id:'pku',name:'北京大学',tier:'985',grad:'https://grs.pku.edu.cn/',sfl:'https://sfl.pku.edu.cn/',law:'https://www.law.pku.edu.cn/',journalism:'https://sjc.pku.edu.cn/',ir:'https://www.sis.pku.edu.cn/',verified:true},
+  {id:'thu',name:'清华大学',tier:'985',grad:'https://yz.tsinghua.edu.cn/',sfl:'https://www.dfll.tsinghua.edu.cn/',law:'https://www.law.tsinghua.edu.cn/',journalism:'https://www.tsjc.tsinghua.edu.cn/',ir:'https://www.dir.tsinghua.edu.cn/',verified:true},
+  {id:'fudan',name:'复旦大学',tier:'985',grad:'https://gsao.fudan.edu.cn/',sfl:'https://dfll.fudan.edu.cn/',law:'https://law.fudan.edu.cn/',journalism:'https://xwxy.fudan.edu.cn/',ir:'https://sirpa.fudan.edu.cn/',verified:true},
+  {id:'sjtu',name:'上海交通大学',tier:'985',grad:'https://yzb.sjtu.edu.cn/',sfl:'https://sfl.sjtu.edu.cn/',law:'https://law.sjtu.edu.cn/',ir:'https://www.sipa.sjtu.edu.cn/',verified:true},
+  {id:'nju',name:'南京大学',tier:'985',grad:'https://grawww.nju.edu.cn/',sfl:'https://sfs.nju.edu.cn/',law:'https://law.nju.edu.cn/',journalism:'https://xinchuan.nju.edu.cn/',ir:'https://sgia.nju.edu.cn/',verified:true},
+  {id:'zju',name:'浙江大学',tier:'985',grad:'https://grs.zju.edu.cn/',sfl:'https://www.sis.zju.edu.cn/',law:'http://www.ghls.zju.edu.cn/',verified:false},
+  {id:'whu',name:'武汉大学',tier:'985',grad:'https://gs.whu.edu.cn/',sfl:'https://www.fls.whu.edu.cn/',law:'https://golaw.whu.edu.cn/',journalism:'https://journal.whu.edu.cn/',verified:true},
+  {id:'sysu',name:'中山大学',tier:'985',grad:'https://graduate.sysu.edu.cn/',sfl:'https://fls.sysu.edu.cn/',law:'https://law.sysu.edu.cn/',ir:'https://sir.sysu.edu.cn/',verified:true},
+  {id:'hit',name:'哈尔滨工业大学',tier:'985',grad:'https://yzb.hit.edu.cn/',sfl:'http://www.hit.edu.cn/',verified:true},
+  {id:'nankai',name:'南开大学',tier:'985',grad:'https://yzb.nankai.edu.cn/',sfl:'https://fcollege.nankai.edu.cn/',law:'https://law.nankai.edu.cn/',verified:true},
+  {id:'xmu',name:'厦门大学',tier:'985',grad:'https://zs.xmu.edu.cn/',sfl:'https://cflc.xmu.edu.cn/',law:'https://law.xmu.edu.cn/',journalism:'https://comm.xmu.edu.cn/',ir:'https://guoguan.xmu.edu.cn/',verified:true},
+  {id:'buaa',name:'北京航空航天大学',tier:'985',grad:'https://yzb.buaa.edu.cn/',sfl:'https://fld.buaa.edu.cn/',law:'https://fxy.buaa.edu.cn/',verified:false},
+  {id:'bit',name:'北京理工大学',tier:'985',grad:'https://grd.bit.edu.cn/',sfl:'https://sfl.bit.edu.cn/',law:'https://law.bit.edu.cn/',verified:false},
+  {id:'cau',name:'中国农业大学',tier:'985',grad:'https://yz.cau.edu.cn/',sfl:'https://sfl.cau.edu.cn/',verified:false},
+  {id:'bnu',name:'北京师范大学',tier:'985',grad:'https://yz.bnu.edu.cn/',sfl:'https://www.sfll.bnu.edu.cn/',law:'https://law.bnu.edu.cn/',journalism:'https://sjc.bnu.edu.cn/',verified:false},
+  {id:'cuc',name:'中央民族大学',tier:'985',grad:'https://grs.muc.edu.cn/',sfl:'https://wgy.muc.edu.cn/',law:'https://law.muc.edu.cn/',verified:false},
+  {id:'tju',name:'天津大学',tier:'985',grad:'https://yzb.tju.edu.cn/',sfl:'https://sfl.tju.edu.cn/',verified:false},
+  {id:'dlut',name:'大连理工大学',tier:'985',grad:'https://gs.dlut.edu.cn/',sfl:'http://fld.dlut.edu.cn/',verified:false},
+  {id:'neu',name:'东北大学',tier:'985',grad:'https://yz.neu.edu.cn/',sfl:'http://www.wgyxy.neu.edu.cn/',verified:false},
+  {id:'jlu',name:'吉林大学',tier:'985',grad:'https://zsb.jlu.edu.cn/',sfl:'https://sflc.jlu.edu.cn/',law:'https://law.jlu.edu.cn/',verified:false},
+  {id:'ecnu',name:'华东师范大学',tier:'985',grad:'https://yjszs.ecnu.edu.cn/',sfl:'https://www.fl.ecnu.edu.cn/',law:'https://law.ecnu.edu.cn/',verified:false},
+  {id:'seu',name:'东南大学',tier:'985',grad:'https://yzb.seu.edu.cn/',sfl:'https://sfl.seu.edu.cn/',law:'https://law.seu.edu.cn/',verified:false},
+  {id:'hust',name:'华中科技大学',tier:'985',grad:'https://gszs.hust.edu.cn/',sfl:'https://sfl.hust.edu.cn/',law:'https://law.hust.edu.cn/',journalism:'https://sjic.hust.edu.cn/',verified:false},
+  {id:'csu',name:'中南大学',tier:'985',grad:'https://gra.csu.edu.cn/',sfl:'https://sfl.csu.edu.cn/',law:'https://law.csu.edu.cn/',verified:false},
+  {id:'scu',name:'四川大学',tier:'985',grad:'https://yz.scu.edu.cn/',sfl:'https://flc.scu.edu.cn/',law:'https://law.scu.edu.cn/',ir:'https://iir.scu.edu.cn/',verified:false},
+  {id:'cqu',name:'重庆大学',tier:'985',grad:'https://yz.cqu.edu.cn/',sfl:'http://www.cfls.cqu.edu.cn/',law:'http://law.cqu.edu.cn/',verified:false},
+  {id:'xjtu',name:'西安交通大学',tier:'985',grad:'https://yz.xjtu.edu.cn/',sfl:'https://sfs.xjtu.edu.cn/',law:'https://fxy.xjtu.edu.cn/',verified:false},
+  {id:'nwpu',name:'西北工业大学',tier:'985',grad:'https://yzb.nwpu.edu.cn/',sfl:'https://wgyxy.nwpu.edu.cn/',verified:false},
+  {id:'lzu',name:'兰州大学',tier:'985',grad:'https://yz.lzu.edu.cn/',sfl:'http://wyy.lzu.edu.cn/',law:'http://laws.lzu.edu.cn/',verified:false},
+  {id:'ouc',name:'中国海洋大学',tier:'985',grad:'https://yz.ouc.edu.cn/',sfl:'https://flc.ouc.edu.cn/',law:'http://law.ouc.edu.cn/',verified:false},
+  {id:'tongji',name:'同济大学',tier:'985',grad:'https://yz.tongji.edu.cn/',sfl:'https://sfl.tongji.edu.cn/',law:'https://law.tongji.edu.cn/',ir:'https://spsir.tongji.edu.cn/',verified:false},
+  {id:'uestc',name:'电子科技大学',tier:'985',grad:'https://yz.uestc.edu.cn/',sfl:'https://www.fl.uestc.edu.cn/',verified:false},
+  {id:'cnu',name:'国防科技大学',tier:'985',grad:'https://yjszs.nudt.edu.cn/',verified:false},
+  {id:'nwafu',name:'西北农林科技大学',tier:'985',grad:'https://yz.nwsuaf.edu.cn/',sfl:'https://wyxy.nwsuaf.edu.cn/',verified:false},
+  {id:'cqupt',name:'中国人民大学',tier:'985',grad:'https://pgs.ruc.edu.cn/',sfl:'https://fl.ruc.edu.cn/',law:'https://law.ruc.edu.cn/',journalism:'http://jcr.ruc.edu.cn/',ir:'https://sis.ruc.edu.cn/',verified:false},
+  {id:'sdu',name:'山东大学',tier:'985',grad:'https://yz.sdu.edu.cn/',sfl:'https://www.flc.sdu.edu.cn/',law:'https://law.sdu.edu.cn/',verified:false},
+  {id:'hunnu',name:'湖南大学',tier:'985',grad:'http://gra.hnu.edu.cn/',sfl:'http://english.hnu.edu.cn/',law:'http://law.hnu.edu.cn/',verified:false},
+  {id:'cug',name:'中国地质大学(武汉)',tier:'211',grad:'https://yz.cug.edu.cn/',sfl:'https://wyxy.cug.edu.cn/',verified:false},
+
+  // === 211 (non-985, 部分) ===
+  {id:'bfsu',name:'北京外国语大学',tier:'211',grad:'https://graduate.bfsu.edu.cn/',sfl:'https://seis.bfsu.edu.cn/',law:'https://law.bfsu.edu.cn/',ir:'https://sird.bfsu.edu.cn/',verified:true},
+  {id:'shisu',name:'上海外国语大学',tier:'211',grad:'https://yz.shisu.edu.cn/',sfl:'https://www.ses.shisu.edu.cn/',law:'https://www.sfl.shisu.edu.cn/',ir:'https://www.sirpa.shisu.edu.cn/',verified:true},
+  {id:'cuc2',name:'中国传媒大学',tier:'211',grad:'https://yz.cuc.edu.cn/',sfl:'https://sfl.cuc.edu.cn/',journalism:'https://xwcb.cuc.edu.cn/',verified:false},
+  {id:'cupl',name:'中国政法大学',tier:'211',grad:'https://yjsy.cupl.edu.cn/',sfl:'https://wgyxy.cupl.edu.cn/',law:'https://fxy.cupl.edu.cn/',verified:false},
+  {id:'bfu',name:'北京林业大学',tier:'211',grad:'https://graduate.bjfu.edu.cn/',sfl:'https://waiyu.bjfu.edu.cn/',verified:false},
+  {id:'bjtu',name:'北京交通大学',tier:'211',grad:'https://gs.bjtu.edu.cn/',sfl:'https://sfs.bjtu.edu.cn/',verified:false},
+  {id:'buct',name:'北京化工大学',tier:'211',grad:'https://graduate.buct.edu.cn/',sfl:'https://wgyxy.buct.edu.cn/',verified:false},
+  {id:'bupt',name:'北京邮电大学',tier:'211',grad:'https://yzb.bupt.edu.cn/',sfl:'https://sfl.bupt.edu.cn/',verified:false},
+  {id:'bistu',name:'北京科技大学',tier:'211',grad:'https://yzxc.ustb.edu.cn/',sfl:'https://sfs.ustb.edu.cn/',verified:false},
+  {id:'cufe',name:'中央财经大学',tier:'211',grad:'https://gs.cufe.edu.cn/',sfl:'https://sfs.cufe.edu.cn/',law:'https://law.cufe.edu.cn/',verified:false},
+  {id:'uibe',name:'对外经济贸易大学',tier:'211',grad:'https://yjsy.uibe.edu.cn/',sfl:'http://sfs.uibe.edu.cn/',law:'https://law.uibe.edu.cn/',ir:'http://sir.uibe.edu.cn/',verified:false},
+  {id:'cugb',name:'中国地质大学(北京)',tier:'211',grad:'https://www.cugb.edu.cn/',sfl:'https://waiyu.cugb.edu.cn/',verified:false},
+  {id:'cumtb',name:'中国矿业大学(北京)',tier:'211',grad:'https://yjs.cumtb.edu.cn/',verified:false},
+  {id:'cup',name:'中国石油大学(北京)',tier:'211',grad:'https://www.cup.edu.cn/',sfl:'http://www.cup.edu.cn/wgyxy/',verified:false},
+  {id:'hebut',name:'河北工业大学',tier:'211',grad:'https://yjs.hebut.edu.cn/',sfl:'https://sfl.hebut.edu.cn/',verified:false},
+  {id:'tyut',name:'太原理工大学',tier:'211',grad:'https://yz.tyut.edu.cn/',sfl:'http://www.tyut.edu.cn/',verified:false},
+  {id:'imu',name:'内蒙古大学',tier:'211',grad:'https://gs.imu.edu.cn/',sfl:'https://wgyxy.imu.edu.cn/',verified:false},
+  {id:'lnu',name:'辽宁大学',tier:'211',grad:'https://grs.lnu.edu.cn/',sfl:'http://wgy.lnu.edu.cn/',law:'https://law.lnu.edu.cn/',verified:false},
+  {id:'dlu',name:'大连海事大学',tier:'211',grad:'https://grs.dlmu.edu.cn/',sfl:'https://sfl.dlmu.edu.cn/',law:'https://law.dlmu.edu.cn/',verified:false},
+  {id:'nenu',name:'东北师范大学',tier:'211',grad:'https://yjsy.nenu.edu.cn/',sfl:'https://wy.nenu.edu.cn/',verified:false},
+  {id:'ybu',name:'延边大学',tier:'211',grad:'https://grad.ybu.edu.cn/',sfl:'http://wgy.ybu.edu.cn/',verified:false},
+  {id:'hrbeu',name:'哈尔滨工程大学',tier:'211',grad:'https://yzb.hrbeu.edu.cn/',sfl:'https://flc.hrbeu.edu.cn/',verified:false},
+  {id:'nefu',name:'东北林业大学',tier:'211',grad:'https://yz.nefu.edu.cn/',sfl:'https://waiyu.nefu.edu.cn/',verified:false},
+  {id:'neau',name:'东北农业大学',tier:'211',grad:'https://graduate.neau.edu.cn/',verified:false},
+  {id:'shu',name:'上海大学',tier:'211',grad:'https://yjszs.shu.edu.cn/',sfl:'https://sfl.shu.edu.cn/',law:'https://law.shu.edu.cn/',verified:false},
+  {id:'ecust',name:'华东理工大学',tier:'211',grad:'https://gschool.ecust.edu.cn/',sfl:'https://sfl.ecust.edu.cn/',law:'https://fxy.ecust.edu.cn/',verified:false},
+  {id:'dhu',name:'东华大学',tier:'211',grad:'https://yjszs.dhu.edu.cn/',sfl:'https://flc.dhu.edu.cn/',verified:false},
+  {id:'shisu2',name:'上海财经大学',tier:'211',grad:'https://gs.sufe.edu.cn/',sfl:'https://sflc.sufe.edu.cn/',law:'https://law.sufe.edu.cn/',verified:false},
+  {id:'suda',name:'苏州大学',tier:'211',grad:'https://yjs.suda.edu.cn/',sfl:'http://sfl.suda.edu.cn/',law:'http://law.suda.edu.cn/',verified:false},
+  {id:'seu2',name:'南京航空航天大学',tier:'211',grad:'https://www.graduate.nuaa.edu.cn/',sfl:'https://cfl.nuaa.edu.cn/',verified:false},
+  {id:'njust',name:'南京理工大学',tier:'211',grad:'https://gs.njust.edu.cn/',sfl:'https://sfs.njust.edu.cn/',verified:false},
+  {id:'cumt',name:'中国矿业大学',tier:'211',grad:'https://yjs.cumt.edu.cn/',sfl:'https://sfl.cumt.edu.cn/',verified:false},
+  {id:'hhu',name:'河海大学',tier:'211',grad:'https://gs.hhu.edu.cn/',sfl:'https://waiyuan.hhu.edu.cn/',law:'https://law.hhu.edu.cn/',verified:false},
+  {id:'jiangnan',name:'江南大学',tier:'211',grad:'https://yz.jiangnan.edu.cn/',sfl:'https://foreign.jiangnan.edu.cn/',law:'https://law.jiangnan.edu.cn/',verified:false},
+  {id:'njau',name:'南京农业大学',tier:'211',grad:'https://grasch.njau.edu.cn/',sfl:'https://foreign.njau.edu.cn/',verified:false},
+  {id:'cpu',name:'中国药科大学',tier:'211',grad:'https://yjsy.cpu.edu.cn/',sfl:'https://wgyxy.cpu.edu.cn/',verified:false},
+  {id:'njnu',name:'南京师范大学',tier:'211',grad:'https://yz.njnu.edu.cn/',sfl:'http://wy.njnu.edu.cn/',law:'http://law.njnu.edu.cn/',journalism:'http://xinchuan.njnu.edu.cn/',verified:false},
+  {id:'ahu',name:'安徽大学',tier:'211',grad:'https://graschool.ahu.edu.cn/',sfl:'http://wgy.ahu.edu.cn/',law:'http://law.ahu.edu.cn/',verified:false},
+  {id:'hfut',name:'合肥工业大学',tier:'211',grad:'https://yjszs.hfut.edu.cn/',sfl:'http://wgyxy.hfut.edu.cn/',verified:false},
+  {id:'fzu',name:'福州大学',tier:'211',grad:'https://yjsy.fzu.edu.cn/',sfl:'https://sfl.fzu.edu.cn/',law:'https://law.fzu.edu.cn/',verified:false},
+  {id:'ncu',name:'南昌大学',tier:'211',grad:'https://yjsy.ncu.edu.cn/',sfl:'https://wgy.ncu.edu.cn/',law:'https://law.ncu.edu.cn/',verified:false},
+  {id:'zzu',name:'郑州大学',tier:'211',grad:'http://gs.zzu.edu.cn/',sfl:'http://www5.zzu.edu.cn/fld/',law:'http://www5.zzu.edu.cn/fxy/',verified:false},
+  {id:'henu',name:'河南大学',tier:'211',grad:'https://grs.henu.edu.cn/',sfl:'https://wy.henu.edu.cn/',law:'https://law.henu.edu.cn/',verified:false},
+  {id:'whut',name:'武汉理工大学',tier:'211',grad:'https://gd.whut.edu.cn/',sfl:'http://sfl.whut.edu.cn/',law:'http://law.whut.edu.cn/',verified:false},
+  {id:'ccnu',name:'华中师范大学',tier:'211',grad:'https://gs.ccnu.edu.cn/',sfl:'https://wy.ccnu.edu.cn/',law:'https://law.ccnu.edu.cn/',verified:false},
+  {id:'zuel',name:'中南财经政法大学',tier:'211',grad:'https://yzb.zuel.edu.cn/',sfl:'https://wyxy.zuel.edu.cn/',law:'https://law.zuel.edu.cn/',verified:false},
+  {id:'hnu2',name:'湖南师范大学',tier:'211',grad:'https://yjsy.hunnu.edu.cn/',sfl:'https://fsc.hunnu.edu.cn/',law:'https://law.hunnu.edu.cn/',verified:false},
+  {id:'jnu',name:'暨南大学',tier:'211',grad:'https://yz.jnu.edu.cn/',sfl:'https://www.jnu.edu.cn/',law:'https://law.jnu.edu.cn/',journalism:'https://xwxy.jnu.edu.cn/',ir:'https://sis-aocs.jnu.edu.cn/',verified:false},
+  {id:'scnu',name:'华南师范大学',tier:'211',grad:'https://yz.scnu.edu.cn/',sfl:'https://sfs.scnu.edu.cn/',law:'https://fxy.scnu.edu.cn/',verified:false},
+  {id:'scut',name:'华南理工大学',tier:'211',grad:'https://yz.scut.edu.cn/',sfl:'https://www.scut.edu.cn/sfl/',law:'https://www.scut.edu.cn/law/',verified:false},
+  {id:'gxu',name:'广西大学',tier:'211',grad:'https://yjsc.gxu.edu.cn/',sfl:'https://fls.gxu.edu.cn/',law:'https://law.gxu.edu.cn/',verified:false},
+  {id:'hainu',name:'海南大学',tier:'211',grad:'https://ha.hainanu.edu.cn/gs/',sfl:'https://www.hainanu.edu.cn/',law:'https://ha.hainanu.edu.cn/law/',verified:false},
+  {id:'swjtu',name:'西南交通大学',tier:'211',grad:'https://yz.swjtu.edu.cn/',sfl:'https://sfl.swjtu.edu.cn/',verified:false},
+  {id:'uestc2',name:'西南大学',tier:'211',grad:'http://yanzhao.swu.edu.cn/',sfl:'http://foreign.swu.edu.cn/',law:'http://law.swu.edu.cn/',verified:false},
+  {id:'swufe',name:'西南财经大学',tier:'211',grad:'https://yz.swufe.edu.cn/',sfl:'https://jmwy.swufe.edu.cn/',law:'https://lawschool.swufe.edu.cn/',verified:false},
+  {id:'gzu',name:'贵州大学',tier:'211',grad:'https://gs.gzu.edu.cn/',sfl:'http://fl.gzu.edu.cn/',law:'http://law.gzu.edu.cn/',verified:false},
+  {id:'ynu',name:'云南大学',tier:'211',grad:'https://www.grs.ynu.edu.cn/',sfl:'http://www.sofl.ynu.edu.cn/',law:'http://www.law.ynu.edu.cn/',verified:false},
+  {id:'xdu',name:'西安电子科技大学',tier:'211',grad:'https://yzb.xidian.edu.cn/',sfl:'https://sfl.xidian.edu.cn/',verified:false},
+  {id:'snnu',name:'陕西师范大学',tier:'211',grad:'https://yz.snnu.edu.cn/',sfl:'http://www.wyxy.snnu.edu.cn/',verified:false},
+  {id:'chd',name:'长安大学',tier:'211',grad:'https://yzb.chd.edu.cn/',sfl:'http://sfs.chd.edu.cn/',verified:false},
+  {id:'nwu',name:'西北大学',tier:'211',grad:'https://yjs.nwu.edu.cn/',sfl:'https://wyxy.nwu.edu.cn/',law:'https://law.nwu.edu.cn/',verified:false},
+  {id:'lzu2',name:'新疆大学',tier:'211',grad:'https://gs.xju.edu.cn/',sfl:'http://wgyxy.xju.edu.cn/',law:'http://law.xju.edu.cn/',verified:false},
+  {id:'snnu2',name:'石河子大学',tier:'211',grad:'https://yz.shzu.edu.cn/',sfl:'http://wyxy.shzu.edu.cn/',verified:false},
+  {id:'nxu',name:'宁夏大学',tier:'211',grad:'https://graduate.nxu.edu.cn/',sfl:'https://sfl.nxu.edu.cn/',law:'https://law.nxu.edu.cn/',verified:false},
+  {id:'qhu',name:'青海大学',tier:'211',grad:'https://yjs.qhu.edu.cn/',verified:false},
+  {id:'xju2',name:'西藏大学',tier:'211',grad:'http://yjszs.utibet.edu.cn/',verified:false},
+  {id:'imu2',name:'中国石油大学(华东)',tier:'211',grad:'https://graduate.upc.edu.cn/',sfl:'http://sfs.upc.edu.cn/',law:'http://law.upc.edu.cn/',verified:false},
+
+  // === Language universities (外语类/相关院校) ===
+  {id:'gdufs',name:'广东外语外贸大学',tier:'language',grad:'https://yz.gdufs.edu.cn/',sfl:'https://felc.gdufs.edu.cn/',law:'https://law.gdufs.edu.cn/',ir:'https://sir.gdufs.edu.cn/',verified:false},
+  {id:'xisu',name:'西安外国语大学',tier:'language',grad:'https://yzw.xisu.edu.cn/',sfl:'https://www.xisu.edu.cn/',verified:true},
+  {id:'sisu',name:'四川外国语大学',tier:'language',grad:'https://graduate.sisu.edu.cn/',sfl:'https://www.sisu.edu.cn/',verified:false},
+  {id:'tjfsu',name:'天津外国语大学',tier:'language',grad:'https://grad.tjfsu.edu.cn/',sfl:'https://www.tjfsu.edu.cn/',verified:false},
+  {id:'dlufl',name:'大连外国语大学',tier:'language',grad:'https://grad.dlufl.edu.cn/',sfl:'https://www.dlufl.edu.cn/',verified:false},
+  {id:'bisu',name:'北京第二外国语学院',tier:'language',grad:'https://yjszs.bisu.edu.cn/',sfl:'https://www.bisu.edu.cn/',verified:false},
+  {id:'cfau',name:'外交学院',tier:'language',grad:'https://yjsb.cfau.edu.cn/',sfl:'https://www.cfau.edu.cn/',ir:'https://www.cfau.edu.cn/',verified:false},
+  {id:'uir',name:'国际关系学院',tier:'language',grad:'https://yjszs.uir.cn/',sfl:'https://www.uir.cn/',verified:false},
+  {id:'blcu',name:'北京语言大学',tier:'language',grad:'https://yjsy.blcu.edu.cn/',sfl:'https://www.blcu.edu.cn/',verified:false},
+  {id:'zjnu',name:'浙江师范大学',tier:'language',grad:'https://yzw.zjnu.edu.cn/',sfl:'https://flc.zjnu.edu.cn/',verified:false},
+  {id:'hlju',name:'黑龙江大学',tier:'language',grad:'https://yjsy.hlju.edu.cn/',sfl:'http://wgy.hlju.edu.cn/',law:'http://law.hlju.edu.cn/',verified:false},
+  {id:'shnu',name:'上海师范大学',tier:'language',grad:'https://yjsc.shnu.edu.cn/',sfl:'http://wgy.shnu.edu.cn/',law:'http://law.shnu.edu.cn/',verified:false},
+  {id:'cnu2',name:'首都师范大学',tier:'language',grad:'https://grad.cnu.edu.cn/',sfl:'https://waiyuan.cnu.edu.cn/',law:'https://law.cnu.edu.cn/',verified:false},
+];
+
+// Build school lookup
+const schoolMap = {};
+SCHOOLS.forEach(s => { schoolMap[s.id] = s; });
+
+// ==================== DEFAULT PROGRAM DATA ====================
+function generateId() { return 'e' + Date.now().toString(36) + Math.random().toString(36).substr(2, 6); }
+
+// Helper: create entry with defaults
+function E(school, college, major, category, type, deadline, eventDate, quota, status, url, confidence, note, opts) {
+  opts = opts || {};
+  return {
+    id: generateId(), school, college, major, category, type, deadline, eventDate, quota: quota || '若干',
+    status: status || '待发布', url, urlVerified: confidence === 'confirmed', confidence: confidence || 'predicted',
+    note: note || '', applied: false, interviewed: false, offered: false,
+    appliedAt: null, interviewedAt: null, offeredAt: null, schoolId: ''
+  };
+}
+
+const DEFAULT_DATA = [
+  // ===== 外国语学院/外国语言文学 =====
+  E('北京大学','外国语学院','英语语言文学','foreign_language','夏令营','预计2026年6月中旬','预计2026年7月','若干','即将发布','https://sfl.pku.edu.cn/','confirmed','北大外院官网，关注通知公告'),
+  E('清华大学','外国语言文学系','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.dfll.tsinghua.edu.cn/','confirmed',''),
+  E('复旦大学','外国语言文学学院','英语/翻译/日语/法语/德语等','foreign_language','夏令营','预计2026年6月10日','预计2026年7月','若干','即将发布','https://dfll.fudan.edu.cn/','confirmed',''),
+  E('南京大学','外国语学院','英/法/德/俄/日/西/朝等语言文学','foreign_language','夏令营','预计2026年6月中旬','预计2026年7月','若干','即将发布','https://sfs.nju.edu.cn/','confirmed','七大语系全覆盖'),
+  E('上海交通大学','外国语学院','外国语言文学（学硕）','foreign_language','夏令营','预计2026年6月-7月','待公布','若干','即将发布','https://sfl.sjtu.edu.cn/','confirmed','双一流高校'),
+  E('北京外国语大学','英语学院/各语种学院','英语/翻译/各语种语言文学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月下旬','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed','211外语类top1'),
+  E('上海外国语大学','各语种学院','各语种语言文学/翻译学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','confirmed','211外语类top2'),
+  E('中山大学','外国语学院','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fls.sysu.edu.cn/','confirmed',''),
+  E('厦门大学','外文学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://cflc.xmu.edu.cn/','confirmed',''),
+  E('南开大学','外国语学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fcollege.nankai.edu.cn/','predicted',''),
+  E('武汉大学','外国语言文学学院','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月中旬','预计2026年7月','若干','即将发布','https://www.fls.whu.edu.cn/','predicted',''),
+  E('浙江大学','外国语学院','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sis.zju.edu.cn/','predicted',''),
+  E('北京师范大学','外国语言文学学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sfll.bnu.edu.cn/','predicted',''),
+  E('华东师范大学','外语学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.fl.ecnu.edu.cn/','predicted',''),
+  E('山东大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.flc.sdu.edu.cn/','predicted',''),
+  E('中国人民大学','外国语学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fl.ruc.edu.cn/','predicted',''),
+  E('四川大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://flc.scu.edu.cn/','predicted',''),
+  E('华中科技大学','外国语学院','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sfl.hust.edu.cn/','predicted',''),
+  E('同济大学','外国语学院','外国语言文学/德语/区域国别','foreign_language','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://sfl.tongji.edu.cn/','predicted','德语特色'),
+  E('中南大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://sfl.csu.edu.cn/','predicted',''),
+  E('吉林大学','外国语言文化学院','日/英/俄/朝/西等语言文学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月下旬','若干','待发布','https://sflc.jlu.edu.cn/','predicted','线下复试'),
+  E('大连理工大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月-10月','若干','待发布','http://fld.dlut.edu.cn/','predicted',''),
+  E('北京航空航天大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://fld.buaa.edu.cn/','predicted',''),
+  E('北京理工大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfl.bit.edu.cn/','predicted',''),
+  E('中国海洋大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://flc.ouc.edu.cn/','predicted',''),
+  E('中央民族大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://wgy.muc.edu.cn/','predicted',''),
+  E('广东外语外贸大学','各语种学院','各语种语言文学/翻译学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.gdufs.edu.cn/','predicted','外语类强校'),
+  E('西安外国语大学','各语种学院','各语种语言文学/翻译学','foreign_language','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://yzw.xisu.edu.cn/','predicted','外语类院校'),
+  E('四川外国语大学','各语种学院','各语种语言文学','foreign_language','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://graduate.sisu.edu.cn/','predicted','一等奖学金10000元'),
+  E('天津外国语大学','各语种学院','各语种语言文学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://grad.tjfsu.edu.cn/','predicted',''),
+  E('大连外国语大学','各语种学院','各语种语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://grad.dlufl.edu.cn/','predicted',''),
+  E('北京第二外国语学院','日语学院/各语种学院','各语种语言文学','foreign_language','夏令营','2026年6月15日','2026年7月11日-12日','约30人','报名中','https://yjszs.bisu.edu.cn/','predicted','材料PDF发送至指定邮箱'),
+  E('北京语言大学','外国语学部','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yjsy.blcu.edu.cn/','predicted','语言类特色院校'),
+  E('对外经济贸易大学','外语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://sfs.uibe.edu.cn/','predicted',''),
+  E('东北师范大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月-10月','若干','待发布','https://wy.nenu.edu.cn/','predicted',''),
+  E('南京师范大学','外国语学院','外国语言文学','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','http://wy.njnu.edu.cn/','predicted',''),
+  E('华中师范大学','外国语学院','外国语言文学/翻译','foreign_language','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://wy.ccnu.edu.cn/','predicted',''),
+  E('华南师范大学','外国语言文化学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfs.scnu.edu.cn/','predicted',''),
+  E('湖南师范大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://fsc.hunnu.edu.cn/','predicted',''),
+  E('苏州大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://sfl.suda.edu.cn/','predicted',''),
+  E('上海大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfl.shu.edu.cn/','predicted',''),
+  E('郑州大学','外国语与国际关系学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://www5.zzu.edu.cn/fld/','predicted',''),
+  E('云南大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://www.sofl.ynu.edu.cn/','predicted',''),
+  E('黑龙江大学','西语学院/东语学院','外国语言文学（俄/英/日/法等）','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://wgy.hlju.edu.cn/','predicted','俄语全国top级'),
+  E('首都师范大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://waiyuan.cnu.edu.cn/','predicted',''),
+  E('浙江师范大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月下旬','若干','待发布','https://flc.zjnu.edu.cn/','predicted',''),
+  E('福州大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月-10月','若干','待发布','https://sfl.fzu.edu.cn/','predicted',''),
+  E('北京林业大学','外语学院','外国语言文学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月下旬','共4名','待发布','https://waiyu.bjfu.edu.cn/','predicted','线下复试'),
+  E('江南大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月下旬','待公布','约2人','待发布','https://foreign.jiangnan.edu.cn/','predicted',''),
+  E('外交学院','外语系/英语系','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjsb.cfau.edu.cn/','predicted','外交外事特色'),
+  E('国际关系学院','外语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjszs.uir.cn/','predicted',''),
+
+  // ===== 翻译硕士MTI =====
+  E('北京外国语大学','高级翻译学院','翻译硕士（MTI）','mti','预推免','预计2026年9月中旬','预计2026年9月下旬','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed','MTI顶尖院校'),
+  E('上海外国语大学','高级翻译学院','翻译硕士（MTI）','mti','预推免','预计2026年9月中旬','预计2026年9月下旬','若干','待发布','https://yz.shisu.edu.cn/','confirmed',''),
+  E('北京大学','外国语学院','翻译硕士（MTI）','mti','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://sfl.pku.edu.cn/','confirmed',''),
+  E('复旦大学','外国语言文学学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月10日','预计2026年7月','若干','即将发布','https://dfll.fudan.edu.cn/','confirmed',''),
+  E('南京大学','外国语学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sfs.nju.edu.cn/','confirmed',''),
+  E('广东外语外贸大学','高级翻译学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.gdufs.edu.cn/','predicted','MTI强校'),
+  E('对外经济贸易大学','英语学院','翻译硕士（MTI）','mti','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://sfs.uibe.edu.cn/','predicted',''),
+  E('武汉大学','外国语言文学学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.fls.whu.edu.cn/','predicted',''),
+  E('中山大学','外国语学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fls.sysu.edu.cn/','confirmed',''),
+  E('厦门大学','外文学院','翻译硕士（MTI）','mti','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://cflc.xmu.edu.cn/','confirmed',''),
+  E('同济大学','外国语学院','翻译硕士（MTI）','mti','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfl.tongji.edu.cn/','predicted',''),
+  E('西安外国语大学','高级翻译学院','翻译硕士（MTI）','mti','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://yzw.xisu.edu.cn/','predicted',''),
+  E('四川外国语大学','翻译学院','翻译硕士（MTI）','mti','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://graduate.sisu.edu.cn/','predicted',''),
+  E('浙江大学','外国语学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sis.zju.edu.cn/','predicted',''),
+  E('中国人民大学','外国语学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fl.ruc.edu.cn/','predicted',''),
+  E('华东师范大学','外语学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.fl.ecnu.edu.cn/','predicted',''),
+  E('北京语言大学','高级翻译学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yjsy.blcu.edu.cn/','predicted',''),
+
+  // ===== 法律硕士（非法本）=====
+  E('北京大学国际法学院','国际法学院（STL）','法律硕士（非法学）JD&JM双学位','law_ilm','夏令营','预计2026年6月22日','预计2026年7月-8月','若干','即将发布','https://stl.pku.edu.cn/','predicted','本科专业不限，非法本专属赛道'),
+  E('中国人民大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月12日','预计2026年7月','若干','即将发布','https://law.ruc.edu.cn/','predicted','非法本法硕名额较多'),
+  E('复旦大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月10日','预计2026年7月','若干','即将发布','https://law.fudan.edu.cn/','predicted',''),
+  E('上海交通大学','凯原法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月25日','预计2026年7月','约33人','即将发布','https://law.sjtu.edu.cn/','predicted','仅通过夏令营选拔，排名前25%'),
+  E('武汉大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月10日','预计2026年7月','约33人','即将发布','https://golaw.whu.edu.cn/','predicted','优先985/211'),
+  E('南京大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://law.nju.edu.cn/','predicted',''),
+  E('中山大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://law.sysu.edu.cn/','predicted',''),
+  E('浙江大学','光华法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','http://www.ghls.zju.edu.cn/','predicted',''),
+  E('中国政法大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fxy.cupl.edu.cn/','predicted','法学top校'),
+  E('对外经济贸易大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.uibe.edu.cn/','predicted','涉外法律方向适合外语背景'),
+  E('华东师范大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月上旬','预计2026年9月中旬','约10人','待发布','https://law.ecnu.edu.cn/','predicted','综合考核80%+外语20%'),
+  E('西安交通大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月23日','预计2026年7月','若干','即将发布','https://fxy.xjtu.edu.cn/','predicted',''),
+  E('华中科技大学','法学院','法律硕士（非法学）','law_ilm','夏令营','预计2026年6月18日','预计2026年7月','若干','即将发布','https://law.hust.edu.cn/','predicted',''),
+  E('中南大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月中旬','预计2026年9月中旬','约50名','待发布','https://law.csu.edu.cn/','predicted',''),
+  E('吉林大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.jlu.edu.cn/','predicted',''),
+  E('四川大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.scu.edu.cn/','predicted',''),
+  E('厦门大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.xmu.edu.cn/','predicted',''),
+  E('中央财经大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.cufe.edu.cn/','predicted',''),
+  E('西南政法大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月中旬','预计2026年9月下旬','若干','待发布','https://yjsy.swupl.edu.cn/','predicted','五院四系之一'),
+  E('中南财经政法大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.zuel.edu.cn/','predicted','五院四系之一'),
+  E('北京外国语大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://law.bfsu.edu.cn/','predicted','涉外法律+外语优势'),
+  E('上海外国语大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.sfl.shisu.edu.cn/','predicted','涉外法律方向'),
+  E('中国社会科学院大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月中旬','预计2026年9月-10月','约87人','待发布','https://law.ucass.edu.cn/','predicted','规模最大'),
+  E('江南大学','法学院','法律硕士（非法学）','law_ilm','预推免','预计2026年9月中旬','待公布','约10人','待发布','https://law.jiangnan.edu.cn/','predicted','线上复试'),
+
+  // ===== 新闻传播/国际新闻 =====
+  E('清华大学','新闻与传播学院','国际新闻传播','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.tsjc.tsinghua.edu.cn/','predicted','外语背景有优势'),
+  E('北京大学','新闻与传播学院','新闻与传播/国际新闻','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sjc.pku.edu.cn/','predicted',''),
+  E('复旦大学','新闻学院','新闻传播/国际新闻','journalism','夏令营','预计2026年6月初','预计2026年7月','若干','即将发布','https://xwxy.fudan.edu.cn/','predicted','新闻传播top级'),
+  E('中国人民大学','新闻学院','新闻传播/国际新闻','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','http://jcr.ruc.edu.cn/','predicted','新闻传播top级'),
+  E('中国传媒大学','新闻学院/电视学院','新闻传播/国际新闻','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://xwcb.cuc.edu.cn/','predicted','新传专业院校top'),
+  E('武汉大学','新闻与传播学院','新闻传播','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://journal.whu.edu.cn/','predicted',''),
+  E('华中科技大学','新闻与信息传播学院','新闻传播','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sjic.hust.edu.cn/','predicted',''),
+  E('暨南大学','新闻与传播学院','新闻传播/国际新闻','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://xwxy.jnu.edu.cn/','predicted','华南新传重镇'),
+  E('南京大学','新闻传播学院','新闻传播','journalism','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://xinchuan.nju.edu.cn/','predicted',''),
+  E('北京外国语大学','国际新闻与传播学院','国际新闻/国际传播','journalism','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed','外语+新传交叉'),
+  E('上海外国语大学','新闻传播学院','国际新闻/传播学','journalism','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','confirmed','外语+新传交叉'),
+  E('厦门大学','新闻传播学院','新闻传播','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://comm.xmu.edu.cn/','predicted',''),
+  E('四川大学','文学与新闻学院','新闻传播','journalism','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://lj.scu.edu.cn/','predicted',''),
+  E('南京师范大学','新闻与传播学院','新闻传播','journalism','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','http://xinchuan.njnu.edu.cn/','predicted',''),
+
+  // ===== 国际关系/外交学 =====
+  E('北京大学','国际关系学院','国际关系/国际政治/外交学','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sis.pku.edu.cn/','confirmed','国关top1'),
+  E('清华大学','国际关系学系','国际关系/国际政治','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.dir.tsinghua.edu.cn/','predicted',''),
+  E('复旦大学','国际关系与公共事务学院','国际关系/外交学','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sirpa.fudan.edu.cn/','predicted',''),
+  E('中国人民大学','国际关系学院','国际关系/国际政治/外交学','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sis.ruc.edu.cn/','predicted',''),
+  E('外交学院','外交学与外事管理系','外交学/国际关系','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yjsb.cfau.edu.cn/','predicted','外交部直属'),
+  E('国际关系学院','国际政治系','国际关系/国际政治','international_relations','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjszs.uir.cn/','predicted',''),
+  E('南京大学','国际关系学院','国际关系/外交学','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sgia.nju.edu.cn/','predicted',''),
+  E('武汉大学','政治与公共管理学院','国际关系/国际政治','international_relations','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.whu.edu.cn/','predicted',''),
+  E('上海外国语大学','国际关系与公共事务学院','国际关系','international_relations','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.sirpa.shisu.edu.cn/','predicted','外语+国关交叉'),
+  E('北京外国语大学','国际关系学院','国际关系/外交学','international_relations','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sird.bfsu.edu.cn/','predicted',''),
+  E('暨南大学','国际关系学院','国际关系/外交学','international_relations','夏令营','2026年6月15日','2026年7月20日-23日','40人','报名中','https://sis-aocs.jnu.edu.cn/','predicted','线下举办，结业证为推免重要参考'),
+  E('厦门大学','国际关系学院/南洋研究院','国际关系','international_relations','预推免','预计2026年8月','预计2026年9月','若干','待发布','https://guoguan.xmu.edu.cn/','predicted','东南亚研究特色'),
+  E('对外经济贸易大学','国际关系学院','国际关系/国际政治','international_relations','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://sir.uibe.edu.cn/','predicted',''),
+  E('四川大学','国际关系学院','国际关系','international_relations','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://iir.scu.edu.cn/','predicted',''),
+
+  // ===== 区域国别学 =====
+  E('同济大学','外国语学院','区域国别学（140700一级交叉学科）','area_studies','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://sfl.tongji.edu.cn/','predicted','授文学或法学学位'),
+  E('中山大学','国际翻译学院','区域国别学（140700）','area_studies','预推免','预计2026年9月上旬','预计2026年9月','若干','待发布','https://sti.sysu.edu.cn/','predicted','欧洲/中东/拉美/东亚研究中心'),
+  E('暨南大学','国际关系学院','区域国别/国际关系','area_studies','夏令营','2026年6月15日','2026年7月20日-23日','40人','报名中','https://sis-aocs.jnu.edu.cn/','predicted',''),
+  E('中国农业大学','国际发展与全球农业学院','区域国别与全球发展','area_studies','暑期学校','2026年5月6日','2026年7月5日-18日','若干','已截止','https://cohd.cau.edu.cn/','predicted','北京+云南'),
+  E('西安外国语大学','国际关系学院','区域国别学（一级学科）','area_studies','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://yzw.xisu.edu.cn/','predicted','有机会赴华沙大学双硕士'),
+  E('四川外国语大学','国际关系学院','区域国别学（140700）','area_studies','预推免','预计2026年9月下旬','预计2026年9月-10月','若干','待发布','https://graduate.sisu.edu.cn/','predicted','均享一等奖学金10000元'),
+  E('厦门大学','国际关系学院/南洋研究院','区域国别学','area_studies','预推免','预计2026年8月','预计2026年9月','若干','待发布','https://guoguan.xmu.edu.cn/','predicted','语言+专业+区域复合型培养'),
+  E('浙江师范大学','非洲研究院','区域国别学/非洲学','area_studies','预推免','预计2026年9月下旬','预计2026年9月下旬','若干','待发布','https://ias.zjnu.edu.cn/','predicted','硕士3年，直博5年'),
+  E('中国社会科学院大学','全球与区域国别学院','区域国别学','area_studies','预推免','预计2026年9月中旬','预计2026年9月-10月','约3人','待发布','https://sipe.ucass.edu.cn/','predicted',''),
+  E('北京大学','区域与国别研究院','区域国别学','area_studies','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://grs.pku.edu.cn/','confirmed',''),
+  E('辽宁大学','日本研究所','区域国别经济','area_studies','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://grs.lnu.edu.cn/','predicted','英日俄语均可'),
+  E('陕西师范大学','区域国别研究院','区域国别方向','area_studies','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://yz.snnu.edu.cn/','predicted',''),
+  E('上海外国语大学','区域国别研究院','区域国别学','area_studies','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','confirmed',''),
+
+  // ===== 比较文学与跨文化研究 =====
+  E('北京大学','外国语学院/中文系','比较文学与世界文学','comparative_lit','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sfl.pku.edu.cn/','confirmed',''),
+  E('复旦大学','外国语言文学学院','比较文学与跨文化研究','comparative_lit','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://dfll.fudan.edu.cn/','confirmed',''),
+  E('中国人民大学','文学院/外国语学院','比较文学与世界文学','comparative_lit','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fl.ruc.edu.cn/','predicted',''),
+  E('北京外国语大学','外国文学研究所','比较文学与跨文化研究','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed',''),
+  E('上海外国语大学','文学研究院','比较文学与跨文化研究','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','confirmed',''),
+  E('南京大学','外国语学院','比较文学与跨文化研究','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfs.nju.edu.cn/','confirmed',''),
+  E('武汉大学','外国语言文学学院','比较文学与世界文学','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.fls.whu.edu.cn/','predicted',''),
+  E('四川大学','文学与新闻学院','比较文学与世界文学','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://lj.scu.edu.cn/','predicted',''),
+  E('中山大学','外国语学院','比较文学与跨文化研究','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://fls.sysu.edu.cn/','confirmed',''),
+  E('福建师范大学','文学院','比较文学与世界文学','comparative_lit','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://wxy.fjnu.edu.cn/','predicted',''),
+  E('福州大学','外国语学院','比较文学与跨文化研究','comparative_lit','预推免','预计2026年9月','预计2026年9月-10月','若干','待发布','https://sfl.fzu.edu.cn/','predicted',''),
+
+  // ===== 汉语国际教育 =====
+  E('北京大学','对外汉语教育学院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://grs.pku.edu.cn/','confirmed','外语背景有优势'),
+  E('北京语言大学','汉语国际教育研究院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yjsy.blcu.edu.cn/','predicted','汉教专业院校top'),
+  E('北京外国语大学','中国语言文学学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed',''),
+  E('上海外国语大学','国际文化交流学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','confirmed',''),
+  E('华东师范大学','国际汉语文化学院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.fl.ecnu.edu.cn/','predicted',''),
+  E('中国人民大学','国际文化交流学院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fl.ruc.edu.cn/','predicted',''),
+  E('复旦大学','国际文化交流学院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://dfll.fudan.edu.cn/','predicted',''),
+  E('北京师范大学','汉语文化学院','汉语国际教育','tcsol','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sfll.bnu.edu.cn/','predicted',''),
+  E('南京大学','海外教育学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfs.nju.edu.cn/','predicted',''),
+  E('武汉大学','文学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.fls.whu.edu.cn/','predicted',''),
+  E('中山大学','中国语言文学系','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://fls.sysu.edu.cn/','predicted',''),
+  E('厦门大学','海外教育学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://cflc.xmu.edu.cn/','predicted',''),
+  E('四川大学','海外教育学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://flc.scu.edu.cn/','predicted',''),
+  E('广东外语外贸大学','中国语言文化学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.gdufs.edu.cn/','predicted',''),
+  E('暨南大学','华文学院','汉语国际教育','tcsol','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.jnu.edu.cn/','predicted','华侨特色'),
+
+  // ===== 教育学 =====
+  E('北京师范大学','教育学部','教育学/课程与教学论','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://fe.bnu.edu.cn/','predicted','教育学top1'),
+  E('华东师范大学','教育学部','教育学/比较教育学','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.ed.ecnu.edu.cn/','predicted','外语背景适合比较教育'),
+  E('北京大学','教育学院','教育学','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://grs.pku.edu.cn/','predicted',''),
+  E('清华大学','教育研究院','教育学','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.tsinghua.edu.cn/','predicted',''),
+  E('南京大学','教育研究院','教育学','education','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://grawww.nju.edu.cn/','predicted',''),
+  E('厦门大学','教育研究院','教育学/比较教育学','education','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://cflc.xmu.edu.cn/','predicted',''),
+  E('华中师范大学','教育学院','教育学','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://gs.ccnu.edu.cn/','predicted',''),
+  E('东北师范大学','教育学部','教育学','education','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjsy.nenu.edu.cn/','predicted',''),
+  E('南京师范大学','教育科学学院','教育学','education','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.njnu.edu.cn/','predicted',''),
+  E('华南师范大学','教育科学学院','教育学','education','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.scnu.edu.cn/','predicted',''),
+  E('湖南师范大学','教育科学学院','教育学','education','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjsy.hunnu.edu.cn/','predicted',''),
+
+  // ===== 国际组织/全球治理 =====
+  E('北京大学','国际关系学院','国际组织与全球治理','global_governance','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sis.pku.edu.cn/','predicted','外语背景核心赛道'),
+  E('清华大学','社会科学学院','全球治理','global_governance','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.tsinghua.edu.cn/','predicted',''),
+  E('复旦大学','国际关系与公共事务学院','国际组织与全球治理','global_governance','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sirpa.fudan.edu.cn/','predicted',''),
+  E('北京外国语大学','国际组织学院','国际组织与全球治理','global_governance','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://graduate.bfsu.edu.cn/','confirmed','国际组织后备人才项目'),
+  E('上海外国语大学','国际关系学院','国际组织与全球治理','global_governance','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://www.sirpa.shisu.edu.cn/','predicted',''),
+  E('外交学院','国际组织学院','国际组织与全球治理','global_governance','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjsb.cfau.edu.cn/','predicted',''),
+  E('浙江大学','外国语学院','国际组织与国际交流','global_governance','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sis.zju.edu.cn/','predicted',''),
+  E('对外经济贸易大学','国际关系学院','全球治理/国际发展','global_governance','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://sir.uibe.edu.cn/','predicted',''),
+  E('广东外语外贸大学','国际关系学院','全球治理','global_governance','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sir.gdufs.edu.cn/','predicted',''),
+  E('暨南大学','国际关系学院','全球治理','global_governance','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://sis-aocs.jnu.edu.cn/','predicted',''),
+
+  // ===== 其他交叉学科 =====
+  E('北京大学','燕京学堂','中国学（硕士）','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yenching.pku.edu.cn/','predicted','全英文授课，外语背景核心选择'),
+  E('清华大学','苏世民书院','全球领导力（硕士）','interdisciplinary','夏令营','预计2026年5月','预计2026年7月','若干','即将发布','https://www.sc.tsinghua.edu.cn/','predicted','全英文，全额奖学金'),
+  E('南京大学','中美文化研究中心','国际研究','interdisciplinary','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://grawww.nju.edu.cn/','predicted','外语学生友好'),
+  E('复旦大学','全球公共政策研究院','全球公共政策','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://igpp.fudan.edu.cn/','predicted','全英文项目'),
+  E('上海交通大学','国际与公共事务学院','公共管理/国际事务','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://www.sipa.sjtu.edu.cn/','predicted',''),
+  E('中国人民大学','国际学院（苏州）','金融/国际商务等（适合外语跨保）','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://ic.ruc.edu.cn/','predicted',''),
+  E('北京外国语大学','国际商学院','国际商务/管理（适合外语跨保）','interdisciplinary','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://ibs.bfsu.edu.cn/','predicted',''),
+  E('上海外国语大学','国际工商管理学院','国际商务/管理','interdisciplinary','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yz.shisu.edu.cn/','predicted',''),
+  E('清华大学','社会科学学院','社会学/人类学（适合外语跨保）','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://yz.tsinghua.edu.cn/','predicted',''),
+  E('北京师范大学','社会学院','社会学/人类学（适合外语跨保）','interdisciplinary','夏令营','预计2026年6月','预计2026年7月','若干','即将发布','https://casm.bnu.edu.cn/','predicted',''),
+];
+
+// ==================== DATA MANAGEMENT ====================
+const STORAGE_KEY = 'baoyan_2026_data_v2';
+const SCHEMA_KEY = 'baoyan_2026_schema_v';
+const SETTINGS_KEY = 'baoyan_settings';
+const SCHEMA_VERSION = 2;
+let PAGE_SIZE = parseInt((JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')).pageSize || 50);
+
+let data = [];
+let currentTab = 'all';
+let currentPage = 1;
+let currentFilters = { category: 'all', tier: 'all', confidence: 'all', search: '' };
+
+function loadData() {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const schemaV = parseInt(localStorage.getItem(SCHEMA_KEY) || '0');
+
+  if (stored && schemaV >= SCHEMA_VERSION) {
+    try { data = JSON.parse(stored); } catch(e) { data = migrateFromV1(); }
+  } else if (stored && schemaV < SCHEMA_VERSION) {
+    data = migrateFromV1();
+  } else {
+    data = [...DEFAULT_DATA];
+    localStorage.setItem(SCHEMA_KEY, String(SCHEMA_VERSION));
+  }
+
+  if (!stored) {
+    data = [...DEFAULT_DATA];
+    saveData();
+  }
+}
+
+function migrateFromV1() {
+  const old = localStorage.getItem('baoyan_2026_data');
+  if (!old) return [...DEFAULT_DATA];
+  try {
+    const oldData = JSON.parse(old);
+    const migrated = oldData.map(d => ({
+      id: d.id || generateId(),
+      schoolId: d.schoolId || '',
+      school: d.school || '',
+      college: d.college || '',
+      major: d.major || '',
+      category: mapOldCategory(d.category),
+      type: d.type || '夏令营',
+      deadline: d.deadline || '',
+      eventDate: d.eventDate || '',
+      quota: d.quota || '若干',
+      status: d.status || '待发布',
+      url: d.url || '',
+      urlVerified: d.urlVerified || false,
+      confidence: d.confidence || 'predicted',
+      note: d.note || '',
+      applied: d.applied || false,
+      interviewed: d.interviewed || false,
+      offered: d.offered || false,
+      appliedAt: d.appliedAt || null,
+      interviewedAt: d.interviewedAt || null,
+      offeredAt: d.offeredAt || null
+    }));
+    localStorage.setItem(SCHEMA_KEY, String(SCHEMA_VERSION));
+    return migrated;
+  } catch(e) { return [...DEFAULT_DATA]; }
+}
+
+function mapOldCategory(old) {
+  const map = { japanese: 'foreign_language', areastudies: 'area_studies', law: 'law_ilm' };
+  return map[old] || 'foreign_language';
+}
+
+function saveData() { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); localStorage.setItem(SCHEMA_KEY, String(SCHEMA_VERSION)); }
+
+// ==================== FILTERING & RENDERING ====================
+function getFilteredData() {
+  let filtered = [...data];
+
+  if (currentTab === 'active') filtered = filtered.filter(d => (d.status || '').includes('报名中'));
+  else if (currentTab === 'urgent') filtered = filtered.filter(d => (d.status || '').includes('即将截止'));
+  else if (currentTab === 'today') filtered = filtered.filter(d => {
+    const s = d.status || '';
+    return s.includes('报名中') || s.includes('即将截止') || s.includes('即将发布');
+  });
+  else if (currentTab === 'applied') filtered = filtered.filter(d => d.applied);
+  else if (currentTab === 'interviewed') filtered = filtered.filter(d => d.interviewed);
+  else if (currentTab === 'offered') filtered = filtered.filter(d => d.offered);
+
+  if (currentFilters.category !== 'all') filtered = filtered.filter(d => d.category === currentFilters.category);
+  if (currentFilters.confidence !== 'all') filtered = filtered.filter(d => d.confidence === currentFilters.confidence);
+
+  if (currentFilters.tier !== 'all') {
+    filtered = filtered.filter(d => {
+      const sid = d.schoolId || Object.keys(schoolMap).find(k => schoolMap[k].name === d.school) || '';
+      const school = schoolMap[sid];
+      return school && school.tier === currentFilters.tier;
+    });
+  }
+
+  if (currentFilters.search) {
+    const q = currentFilters.search.toLowerCase();
+    filtered = filtered.filter(d => {
+      const catLabel = (CATEGORIES[d.category] || {}).label || '';
+      return (d.school || '').toLowerCase().includes(q) ||
+        (d.college || '').toLowerCase().includes(q) ||
+        (d.major || '').toLowerCase().includes(q) ||
+        (d.note || '').toLowerCase().includes(q) ||
+        catLabel.toLowerCase().includes(q);
+    });
+  }
+
+  return filtered;
+}
+
+function getPageData() {
+  const filtered = getFilteredData();
+  const start = (currentPage - 1) * PAGE_SIZE;
+  return { items: filtered.slice(start, start + PAGE_SIZE), total: filtered.length };
+}
+
+function getTierBadge(tier) {
+  if (tier === '985') return '<span class="badge badge-985">985</span>';
+  if (tier === '211') return '<span class="badge badge-211">211</span>';
+  if (tier === 'language') return '<span class="badge badge-lang">外语类</span>';
+  return '';
+}
+
+function getSchoolTier(schoolName) {
+  const school = SCHOOLS.find(s => s.name === schoolName);
+  return school ? school.tier : '';
+}
+
+function getStatusBadge(status) {
+  if (!status) return '';
+  if (status.includes('报名中')) return `<span class="badge badge-active">${status}</span>`;
+  if (status.includes('即将截止')) return `<span class="badge badge-urgent">${status}</span>`;
+  if (status.includes('已截止')) return `<span class="badge badge-closed">${status}</span>`;
+  if (status.includes('即将发布') || status.includes('待发布')) return `<span class="badge badge-upcoming">${status}</span>`;
+  return status;
+}
+
+function getTypeBadge(type) {
+  if (type === '夏令营') return '<span class="badge badge-summer">夏令营</span>';
+  if (type === '预推免') return '<span class="badge badge-pre">预推免</span>';
+  return type;
+}
+
+function getCategoryBadge(cat) {
+  const c = CATEGORIES[cat];
+  if (!c) return cat;
+  return `<span style="display:inline-block;padding:2px 7px;border-radius:9px;font-size:.7rem;background:${c.color}15;color:${c.color};border:1px solid ${c.color}30;white-space:nowrap">${c.icon} ${c.label}</span>`;
+}
+
+function getConfidenceBadge(conf) {
+  if (conf === 'confirmed') return '<span class="badge badge-verified">✓ 已确认</span>';
+  return '<span class="badge badge-predicted">~ 预测</span>';
+}
+
+function formatUrl(url) {
+  if (!url) return '--';
+  let display = url.replace(/^https?:\/\//, '');
+  if (display.length > 35) display = display.substring(0, 32) + '...';
+  return `<a href="${url}" target="_blank" rel="noopener" title="${url}">${display}</a>`;
+}
+
+function renderTable() {
+  const { items, total } = getPageData();
+  const tbody = document.getElementById('tableBody');
+
+  if (items.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="12" style="text-align:center;padding:48px;color:var(--text-muted);">暂无匹配数据 · 试试调整筛选条件或添加新信息</td></tr>`;
+  } else {
+    tbody.innerHTML = items.map(d => {
+      const tier = getSchoolTier(d.school);
+      const tierBadge = getTierBadge(tier);
+      const catBadge = getCategoryBadge(d.category);
+      const typeBadge = getTypeBadge(d.type);
+      const statusBadge = getStatusBadge(d.status);
+      const confBadge = getConfidenceBadge(d.confidence);
+
+      const apCls = d.applied ? 'on-applied' : '';
+      const ivCls = d.interviewed ? 'on-interview' : '';
+      const ofCls = d.offered ? 'on-offer' : '';
+
+      const apTtl = d.applied && d.appliedAt ? `已申请于 ${new Date(d.appliedAt).toLocaleDateString('zh-CN')}` : '标记已申请';
+      const ivTtl = d.interviewed && d.interviewedAt ? `已入面于 ${new Date(d.interviewedAt).toLocaleDateString('zh-CN')}` : '标记已入面';
+      const ofTtl = d.offered && d.offeredAt ? `已录取于 ${new Date(d.offeredAt).toLocaleDateString('zh-CN')}` : '标记已录取';
+
+      return `<tr>
+        <td><strong style="color:var(--text-bright);">${tierBadge}${d.school}</strong></td>
+        <td>${d.college || '--'}</td>
+        <td>${d.major || '--'}</td>
+        <td>${catBadge}</td>
+        <td>${typeBadge}</td>
+        <td>${d.deadline || '--'}</td>
+        <td>${d.eventDate || '--'}</td>
+        <td>${statusBadge}</td>
+        <td>${confBadge}</td>
+        <td>
+          <button class="track-btn ${apCls}" onclick="toggleTrack('${d.id}','applied')" title="${apTtl}">申</button>
+          <button class="track-btn ${ivCls}" onclick="toggleTrack('${d.id}','interviewed')" title="${ivTtl}">面</button>
+          <button class="track-btn ${ofCls}" onclick="toggleTrack('${d.id}','offered')" title="${ofTtl}">录</button>
+        </td>
+        <td>${formatUrl(d.url)}</td>
+        <td style="font-size:.75rem;color:var(--text-muted);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${(d.note||'').replace(/"/g,'&quot;')}">${d.note || '--'}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  updateStats();
+  renderPagination(total);
+  updateTabCounts();
+}
+
+function renderPagination(total) {
+  const totalPages = Math.ceil(total / PAGE_SIZE) || 1;
+  const pag = document.getElementById('pagination');
+  if (totalPages <= 1) {
+    pag.innerHTML = `<span class="page-info">共 ${total} 条</span>`;
+    return;
+  }
+  let html = `<button ${currentPage===1?'disabled':''} onclick="goToPage(${currentPage-1})">◀ 上一页</button>`;
+  html += `<span class="page-info">第 ${currentPage} / ${totalPages} 页 · 共 ${total} 条</span>`;
+  html += `<button ${currentPage===totalPages?'disabled':''} onclick="goToPage(${currentPage+1})">下一页 ▶</button>`;
+  html += ` <select onchange="changePageSize(this.value)" style="padding:4px 8px;border-radius:4px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:.78rem;font-family:inherit">`;
+  [25, 50, 100].forEach(n => { html += `<option value="${n}" ${PAGE_SIZE===n?'selected':''}>每页${n}条</option>`; });
+  html += `</select>`;
+  pag.innerHTML = html;
+}
+
+function goToPage(p) { currentPage = p; renderTable(); document.getElementById('tableWrapper').scrollTop = 0; }
+function changePageSize(n) { localStorage.setItem(SETTINGS_KEY, JSON.stringify({pageSize: parseInt(n)})); location.reload(); }
+
+function updateStats() {
+  const active = data.filter(d => (d.status||'').includes('报名中')).length;
+  const urgent = data.filter(d => (d.status||'').includes('即将截止')).length;
+  const closed = data.filter(d => (d.status||'').includes('已截止')).length;
+  const upcoming = data.filter(d => { const s = d.status||''; return s.includes('即将发布') || s.includes('待发布'); }).length;
+  const applied = data.filter(d => d.applied).length;
+  const interviewed = data.filter(d => d.interviewed).length;
+  const offered = data.filter(d => d.offered).length;
+  const verified = data.filter(d => d.urlVerified).length;
+
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat-card active"><div class="num">${active}</div><div class="lbl">报名中</div></div>
+    <div class="stat-card urgent"><div class="num">${urgent}</div><div class="lbl">即将截止</div></div>
+    <div class="stat-card"><div class="num">${upcoming}</div><div class="lbl">即将/待发布</div></div>
+    <div class="stat-card"><div class="num">${closed}</div><div class="lbl">已截止</div></div>
+    <div class="stat-card track"><div class="num">${applied}</div><div class="lbl">已申请</div></div>
+    <div class="stat-card track"><div class="num">${interviewed}</div><div class="lbl">已入面</div></div>
+    <div class="stat-card offer"><div class="num">${offered}</div><div class="lbl">已录取</div></div>
+    <div class="stat-card"><div class="num">${verified}/${data.length}</div><div class="lbl">网址已验证</div></div>
+    <div class="stat-card"><div class="num">${data.length}</div><div class="lbl">总计</div></div>
+  `;
+  document.getElementById('dataCount').textContent = data.length;
+}
+
+function updateTabCounts() {
+  document.getElementById('tabActiveCnt').textContent = data.filter(d => (d.status||'').includes('报名中')).length;
+  document.getElementById('tabUrgentCnt').textContent = data.filter(d => (d.status||'').includes('即将截止')).length;
+  document.getElementById('tabAppliedCnt').textContent = data.filter(d => d.applied).length;
+  document.getElementById('tabInterviewedCnt').textContent = data.filter(d => d.interviewed).length;
+  document.getElementById('tabOfferedCnt').textContent = data.filter(d => d.offered).length;
+}
+
+// ==================== TRACKING ====================
+function toggleTrack(id, field) {
+  const entry = data.find(d => d.id === id);
+  if (!entry) return;
+  entry[field] = !entry[field];
+  if (entry[field]) {
+    entry[field + 'At'] = new Date().toISOString();
+  } else {
+    entry[field + 'At'] = null;
+  }
+  saveData();
+
+  // Update only the current page without full re-render for speed
+  renderTable();
+}
+
+function showTrackingSummary() {
+  const applied = data.filter(d => d.applied);
+  const interviewed = data.filter(d => d.interviewed);
+  const offered = data.filter(d => d.offered);
+
+  // By category
+  let catStats = '';
+  Object.keys(CATEGORIES).forEach(cat => {
+    const catData = data.filter(d => d.category === cat);
+    const catAp = catData.filter(d => d.applied).length;
+    const catIv = catData.filter(d => d.interviewed).length;
+    const catOf = catData.filter(d => d.offered).length;
+    if (catAp + catIv + catOf > 0) {
+      const c = CATEGORIES[cat];
+      catStats += `<tr><td>${c.icon} ${c.label}</td><td>${catAp}</td><td>${catIv}</td><td>${catOf}</td></tr>`;
+    }
+  });
+
+  // By tier
+  let tierStats = '';
+  ['985','211','language'].forEach(tier => {
+    const tierSids = SCHOOLS.filter(s => s.tier === tier).map(s => s.name);
+    const tierData = data.filter(d => tierSids.includes(d.school));
+    const tAp = tierData.filter(d => d.applied).length;
+    const tIv = tierData.filter(d => d.interviewed).length;
+    const tOf = tierData.filter(d => d.offered).length;
+    if (tAp + tIv + tOf > 0) {
+      const label = tier === '985' ? '985院校' : tier === '211' ? '211院校' : '外语类院校';
+      tierStats += `<tr><td>${label}</td><td>${tAp}</td><td>${tIv}</td><td>${tOf}</td></tr>`;
+    }
+  });
+
+  document.getElementById('trackSummaryContent').innerHTML = `
+    <div class="report-summary">
+      <div class="stat-card track"><div class="num">${applied.length}</div><div class="lbl">已申请</div></div>
+      <div class="stat-card"><div class="num">${applied.length ? (interviewed.length/applied.length*100).toFixed(1)+'%' : '--'}</div><div class="lbl">入面率</div></div>
+      <div class="stat-card track"><div class="num">${interviewed.length}</div><div class="lbl">已入面</div></div>
+      <div class="stat-card"><div class="num">${interviewed.length ? (offered.length/interviewed.length*100).toFixed(1)+'%' : '--'}</div><div class="lbl">录取率</div></div>
+      <div class="stat-card offer"><div class="num">${offered.length}</div><div class="lbl">已录取</div></div>
+    </div>
+    <h4 style="color:var(--text-bright);margin:16px 0 8px">按类别分布</h4>
+    <table style="font-size:.82rem"><thead><tr><th>类别</th><th>已申请</th><th>已入面</th><th>已录取</th></tr></thead><tbody>${catStats || '<tr><td colspan="4" style="color:var(--text-muted)">暂无追踪数据</td></tr>'}</tbody></table>
+    <h4 style="color:var(--text-bright);margin:16px 0 8px">按学校层次</h4>
+    <table style="font-size:.82rem"><thead><tr><th>层次</th><th>已申请</th><th>已入面</th><th>已录取</th></tr></thead><tbody>${tierStats || '<tr><td colspan="4" style="color:var(--text-muted)">暂无追踪数据</td></tr>'}</tbody></table>
+    <h4 style="color:var(--text-bright);margin:16px 0 8px">最近追踪记录</h4>
+    <div style="font-size:.82rem">${getRecentTrackEvents()}</div>
+  `;
+  document.getElementById('trackModal').classList.add('show');
+}
+
+function getRecentTrackEvents() {
+  const events = [];
+  data.forEach(d => {
+    if (d.appliedAt) events.push({ school: d.school, major: d.major, action: '已申请', time: d.appliedAt });
+    if (d.interviewedAt) events.push({ school: d.school, major: d.major, action: '已入面', time: d.interviewedAt });
+    if (d.offeredAt) events.push({ school: d.school, major: d.major, action: '已录取', time: d.offeredAt });
+  });
+  events.sort((a, b) => new Date(b.time) - new Date(a.time));
+  if (events.length === 0) return '<span style="color:var(--text-muted)">暂无追踪记录，点击表格中的申/面/录按钮开始追踪</span>';
+  return events.slice(0, 15).map(e => {
+    const d = new Date(e.time);
+    return `<div style="padding:3px 0;border-bottom:1px solid var(--border)">${d.toLocaleDateString('zh-CN')} ${d.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})} · <strong>${e.school}</strong> ${e.major} - ${e.action}</div>`;
+  }).join('');
+}
+
+// ==================== DAILY REPORT ====================
+function generateDailyReport() {
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+  const timeStr = now.toLocaleTimeString('zh-CN', { hour:'2-digit', minute:'2-digit' });
+  document.getElementById('updateDate').textContent = dateStr;
+  document.getElementById('lastRefreshTime').textContent = `${dateStr} ${timeStr}`;
+  localStorage.setItem('baoyan_last_refresh', JSON.stringify({ date: dateStr, time: timeStr }));
+
+  const activeList = data.filter(d => (d.status||'').includes('报名中'));
+  const urgentList = data.filter(d => (d.status||'').includes('即将截止'));
+  const upcomingList = data.filter(d => (d.status||'').includes('即将发布'));
+
+  function renderItems(list) {
+    if (list.length === 0) return '<div style="color:var(--text-muted);padding:4px 0">暂无</div>';
+    return list.map(d => {
+      const catLabel = (CATEGORIES[d.category]||{}).label || d.category;
+      const days = computeDaysRemaining(d.deadline);
+      return `<div class="report-item">
+        <div class="ri-left">[${getTypeBadge(d.type).replace(/<[^>]*>/g,'')}] <strong>${d.school}</strong> · ${d.major} (${catLabel})</div>
+        <div class="ri-right">${d.deadline || '--'} ${days ? '('+days+')' : ''}</div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('tableWrapper').style.display = 'none';
+  document.getElementById('pagination').style.display = 'none';
+  document.getElementById('reportView').style.display = 'block';
+  document.getElementById('reportView').innerHTML = `
+    <h2>📋 ${dateStr} 保研日报</h2>
+    <p class="report-date">📅 数据刷新于 ${timeStr}</p>
+    <div class="report-summary">
+      <div class="stat-card active"><div class="num">${activeList.length}</div><div class="lbl">报名进行中</div></div>
+      <div class="stat-card urgent"><div class="num">${urgentList.length}</div><div class="lbl">即将截止</div></div>
+      <div class="stat-card"><div class="num">${upcomingList.length}</div><div class="lbl">即将发布</div></div>
+      <div class="stat-card track"><div class="num">${data.filter(d=>d.applied).length}</div><div class="lbl">已申请</div></div>
+      <div class="stat-card offer"><div class="num">${data.filter(d=>d.offered).length}</div><div class="lbl">已录取</div></div>
+    </div>
+    <div class="report-section"><h4>🟢 报名进行中 (${activeList.length})</h4>${renderItems(activeList)}</div>
+    <div class="report-section"><h4>🔴 即将截止 (${urgentList.length})</h4>${renderItems(urgentList)}</div>
+    <div class="report-section"><h4>🟡 即将发布 (${upcomingList.length})</h4>${renderItems(upcomingList)}</div>
+    <div class="report-section"><h4>📊 追踪概览</h4>
+      <div style="padding:8px">已申请 <strong>${data.filter(d=>d.applied).length}</strong> 所 → 已入面 <strong>${data.filter(d=>d.interviewed).length}</strong> 所 → 已录取 <strong>${data.filter(d=>d.offered).length}</strong> 所</div>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <button class="btn btn-outline" onclick="document.getElementById('reportView').style.display='none';document.getElementById('tableWrapper').style.display='';document.getElementById('pagination').style.display='';renderTable()">返回表格视图</button>
+      <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ 打印报告</button>
+    </div>
+  `;
+
+  // Flash button
+  const btn = document.querySelector('.btn-primary');
+  if (btn) { btn.style.transform = 'scale(1.05)'; setTimeout(() => { btn.style.transform = ''; }, 200); }
+  showToast('✅ 今日汇总已生成 · ' + timeStr);
+}
+
+function computeDaysRemaining(deadline) {
+  if (!deadline) return null;
+  const match = deadline.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+  if (!match) return null;
+  const target = new Date(parseInt(match[1]), parseInt(match[2])-1, parseInt(match[3]));
+  const now = new Date();
+  const diff = Math.ceil((target - now) / (1000*60*60*24));
+  if (diff < 0) return '已过期';
+  if (diff === 0) return '今天截止';
+  return `剩${diff}天`;
+}
+
+// ==================== FILTERS & TABS ====================
+function applyFilters() {
+  currentFilters.category = document.getElementById('filterCategory').value;
+  currentFilters.tier = document.getElementById('filterTier').value;
+  currentFilters.confidence = document.getElementById('filterConfidence').value;
+  currentFilters.search = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+  currentPage = 1;
+  renderTable();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  currentPage = 1;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector(`[data-tab="${tab}"]`);
+  if (btn) btn.classList.add('active');
+  document.getElementById('reportView').style.display = 'none';
+  document.getElementById('tableWrapper').style.display = '';
+  document.getElementById('pagination').style.display = '';
+  renderTable();
+}
+
+// ==================== MODAL ====================
+function populateSelects() {
+  const catSel = document.getElementById('filterCategory');
+  const mCatSel = document.getElementById('mCategory');
+  const schoolList = document.getElementById('schoolList');
+
+  let catOpts = '<option value="all">全部类别</option>';
+  let mCatOpts = '';
+  Object.keys(CATEGORIES).forEach(k => {
+    const c = CATEGORIES[k];
+    catOpts += `<option value="${k}">${c.icon} ${c.label}</option>`;
+    mCatOpts += `<option value="${k}">${c.icon} ${c.label}</option>`;
+  });
+  catSel.innerHTML = catOpts;
+  mCatSel.innerHTML = mCatOpts;
+  schoolList.innerHTML = SCHOOLS.map(s => `<option value="${s.name}">${s.name} (${s.tier === '985' ? '985' : s.tier === '211' ? '211' : '外语类'})</option>`).join('');
+}
+
+function openAddModal() {
+  document.getElementById('modalTitle').textContent = '添加招生信息';
+  ['mSchool','mCollege','mMajor','mDeadline','mEventDate','mQuota','mUrl','mNote'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('mCategory').value = 'foreign_language';
+  document.getElementById('mType').value = '夏令营';
+  document.getElementById('mStatus').value = '待发布';
+  document.getElementById('mConfidence').value = 'predicted';
+  document.getElementById('mId').value = '';
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('show'); }
+
+function saveEntry() {
+  const id = document.getElementById('mId').value;
+  const entry = {
+    id: id || generateId(),
+    schoolId: Object.keys(schoolMap).find(k => schoolMap[k].name === document.getElementById('mSchool').value.trim()) || '',
+    school: document.getElementById('mSchool').value.trim(),
+    college: document.getElementById('mCollege').value.trim(),
+    major: document.getElementById('mMajor').value.trim(),
+    category: document.getElementById('mCategory').value,
+    type: document.getElementById('mType').value,
+    deadline: document.getElementById('mDeadline').value.trim(),
+    eventDate: document.getElementById('mEventDate').value.trim(),
+    quota: document.getElementById('mQuota').value.trim() || '若干',
+    status: document.getElementById('mStatus').value,
+    url: document.getElementById('mUrl').value.trim(),
+    urlVerified: document.getElementById('mConfidence').value === 'confirmed',
+    confidence: document.getElementById('mConfidence').value,
+    note: document.getElementById('mNote').value.trim(),
+    applied: false, interviewed: false, offered: false,
+    appliedAt: null, interviewedAt: null, offeredAt: null
+  };
+
+  if (!entry.school || !entry.major) { alert('请至少填写学校名称和专业方向'); return; }
+
+  if (id) {
+    const idx = data.findIndex(d => d.id === id);
+    if (idx >= 0) {
+      ['applied','interviewed','offered','appliedAt','interviewedAt','offeredAt'].forEach(k => { entry[k] = data[idx][k]; });
+      data[idx] = entry;
+    }
+  } else {
+    data.push(entry);
+  }
+
+  saveData(); closeModal(); renderTable();
+}
+
+// ==================== EXPORT / IMPORT ====================
+function exportCSV() {
+  const filtered = getFilteredData();
+  const header = ['学校','学院','专业方向','类别','类型','报名截止','活动时间','招生人数','状态','网址','可信度','已申请','已入面','已录取','备注'];
+  const rows = filtered.map(d => [
+    d.school, d.college, d.major, (CATEGORIES[d.category]||{}).label||d.category, d.type,
+    d.deadline, d.eventDate, d.quota, d.status, d.url, d.confidence,
+    d.applied?'是':'否', d.interviewed?'是':'否', d.offered?'是':'否', d.note||''
+  ]);
+  const BOM = '﻿';
+  const csv = BOM + [header, ...rows].map(r => r.map(c => '"'+(c||'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `保研信息_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+}
+
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `保研数据备份_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+}
+
+function importJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) { alert('文件格式错误'); return; }
+      if (confirm(`即将导入 ${imported.length} 条数据。\n选择"确定"将覆盖现有数据，选择"取消"将合并。`)) {
+        data = imported;
+      } else {
+        const existingIds = new Set(data.map(d => d.id));
+        imported.forEach(d => { if (!existingIds.has(d.id)) data.push(d); });
+      }
+      saveData(); renderTable();
+      alert('导入完成！');
+    } catch(err) { alert('导入失败：' + err.message); }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+function resetData() {
+  if (confirm('确定要恢复默认数据吗？这将删除所有自定义添加的信息和追踪记录。此操作不可撤销。')) {
+    data = [...DEFAULT_DATA];
+    saveData();
+    currentTab = 'all';
+    currentPage = 1;
+    switchTab('all');
+    renderTable();
+  }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.style.display = 'block'; t.style.opacity = '1';
+  clearTimeout(t._timeout);
+  t._timeout = setTimeout(() => { t.style.opacity = '0'; setTimeout(() => { t.style.display = 'none'; }, 300); }, 1800);
+}
+
+function refreshPage() {
+  loadData();
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('zh-CN', {year:'numeric', month:'long', day:'numeric', weekday:'long'});
+  const timeStr = now.toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+  document.getElementById('updateDate').textContent = dateStr;
+  document.getElementById('lastRefreshTime').textContent = `${dateStr} ${timeStr}`;
+  localStorage.setItem('baoyan_last_refresh', JSON.stringify({date: dateStr, time: timeStr}));
+  document.getElementById('reportView').style.display = 'none';
+  document.getElementById('tableWrapper').style.display = '';
+  document.getElementById('pagination').style.display = '';
+  currentTab = 'all'; currentPage = 1;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  const allBtn = document.querySelector('[data-tab="all"]');
+  if (allBtn) allBtn.classList.add('active');
+  document.getElementById('searchInput').value = '';
+  document.getElementById('filterCategory').value = 'all';
+  document.getElementById('filterTier').value = 'all';
+  document.getElementById('filterConfidence').value = 'all';
+  currentFilters = {category:'all', tier:'all', confidence:'all', search:''};
+  renderTable();
+  showToast('✅ 已刷新 · ' + timeStr);
+}
+
+// ==================== INIT ====================
+function init() {
+  loadData();
+
+  populateSelects();
+  renderTable();
+
+  const now = new Date();
+  document.getElementById('updateDate').textContent = now.toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+  document.getElementById('lastRefreshTime').textContent = now.toLocaleString('zh-CN', { hour:'2-digit', minute:'2-digit' });
+
+  const last = localStorage.getItem('baoyan_last_refresh');
+  if (last) {
+    try { const lr = JSON.parse(last); document.getElementById('lastRefreshTime').textContent = `${lr.date} ${lr.time}`; } catch(e) {}
+  }
+
+  document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+  document.getElementById('trackModal').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('show'); });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 'r') { e.preventDefault(); generateDailyReport(); }
+    if (e.ctrlKey && e.key === 'f') { e.preventDefault(); document.getElementById('searchInput').focus(); }
+    if (e.key === 'Escape') { closeModal(); document.getElementById('trackModal').classList.remove('show'); }
+  });
+}
+
+init();
+</script>
+</body>
+</html>
