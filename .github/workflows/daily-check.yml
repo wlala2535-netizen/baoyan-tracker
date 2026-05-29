@@ -1,0 +1,37 @@
+name: 每日保研信息自动检查
+
+on:
+  schedule:
+    # 每天北京时间 8:00 (UTC 0:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # 允许手动触发
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run daily check
+        run: node scripts/check-schools.js
+
+      - name: Commit and push findings
+        run: |
+          git config user.name "保研自动检查机器人"
+          git config user.email "bot@baoyan-tracker.local"
+          git add data/daily-findings.json data/check-log.json
+          if git diff --cached --quiet; then
+            echo "无新发现，跳过提交"
+          else
+            git commit -m "🤖 自动检查: $(date +'%Y-%m-%d') - 发现 $(cat data/daily-findings.json | grep -c 'school') 所新通知"
+            git push
+          fi

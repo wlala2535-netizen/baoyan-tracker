@@ -62,7 +62,7 @@ table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:1100px}
 thead{position:sticky;top:0;z-index:2}
 th{background:var(--surface2);color:var(--text-bright);font-weight:600;padding:10px 10px;text-align:left;border-bottom:2px solid var(--border);white-space:nowrap;font-size:.78rem}
 td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
-tr:hover td{background:rgba(57,186,230,.03)}
+tr:hover td{background:rgba(57,186,230,.03)}tr.discovered td{background:rgba(241,196,15,.06)}tr.discovered td:first-child{border-left:3px solid var(--yellow)}
 td a{color:var(--primary);text-decoration:none;word-break:break-all}
 td a:hover{text-decoration:underline}
 
@@ -159,6 +159,14 @@ td a:hover{text-decoration:underline}
 </div>
 
 <div class="stats-bar" id="statsBar"></div>
+
+<div id="autoCheckBar" style="display:none;background:rgba(241,196,15,.08);border:1px solid rgba(241,196,15,.25);border-radius:var(--radius);padding:10px 20px;margin-bottom:16px;text-align:center;font-size:.84rem">
+  🤖 <strong>自动检查报告</strong>：
+  上次检查 <span id="autoCheckTime">--</span> ｜
+  扫描 <span id="autoCheckTotal">--</span> 所学校 ｜
+  🆕 发现 <span id="autoCheckFound" style="color:var(--accent);font-weight:700">--</span> 条新通知 ｜
+  ⚠️ <span id="autoCheckUnreach" style="color:var(--text-muted)">--</span> 所不可达
+</div>
 
 <div class="filter-bar">
   <select id="filterCategory" onchange="applyFilters()">
@@ -474,6 +482,16 @@ const DEFAULT_DATA = [
   E('江南大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月下旬','待公布','约2人','待发布','https://foreign.jiangnan.edu.cn/','predicted',''),
   E('外交学院','外语系/英语系','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjsb.cfau.edu.cn/','predicted','外交外事特色'),
   E('国际关系学院','外语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://yjszs.uir.cn/','predicted',''),
+  E('西安交通大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfs.xjtu.edu.cn/','predicted','C9高校'),
+  E('湖南大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://english.hnu.edu.cn/','predicted',''),
+  E('重庆大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://www.cfls.cqu.edu.cn/','predicted',''),
+  E('天津大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfl.tju.edu.cn/','predicted',''),
+  E('东南大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://sfl.seu.edu.cn/','predicted',''),
+  E('西北工业大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','https://wgyxy.nwpu.edu.cn/','predicted',''),
+  E('兰州大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://wyy.lzu.edu.cn/','predicted',''),
+  E('电子科技大学','外国语学院','外国语言文学','foreign_language','预推免','预计2026年9月中旬','预计2026年9月','若干','待发布','https://www.fl.uestc.edu.cn/','predicted','夏令营优营可免复试优先拟录取'),
+  E('东北大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://www.wgyxy.neu.edu.cn/','predicted',''),
+  E('上海师范大学','外国语学院','外国语言文学/翻译','foreign_language','预推免','预计2026年9月','预计2026年9月','若干','待发布','http://wgy.shnu.edu.cn/','predicted',''),
 
   // ===== 翻译硕士MTI =====
   E('北京外国语大学','高级翻译学院','翻译硕士（MTI）','mti','夏令营','预计2026年6月中旬','预计2026年7月初','若干','即将发布','https://graduate.bfsu.edu.cn/','predicted','2025年有夏令营，MTI顶尖院校'),
@@ -821,8 +839,9 @@ function renderTable() {
       const ivTtl = d.interviewed && d.interviewedAt ? `已入面于 ${new Date(d.interviewedAt).toLocaleDateString('zh-CN')}` : '标记已入面';
       const ofTtl = d.offered && d.offeredAt ? `已录取于 ${new Date(d.offeredAt).toLocaleDateString('zh-CN')}` : '标记已录取';
 
-      return `<tr>
-        <td><strong style="color:var(--text-bright);">${tierBadge}${d.school}</strong></td>
+      const isDiscovered = autoDiscoveries.some(ad => ad.school === d.school);
+      return `<tr class="${isDiscovered ? 'discovered' : ''}">
+        <td><strong style="color:var(--text-bright);">${tierBadge}${d.school}${isDiscovered ? ' 🆕' : ''}</strong></td>
         <td>${d.college || '--'}</td>
         <td>${d.major || '--'}</td>
         <td>${catBadge}</td>
@@ -1228,11 +1247,30 @@ function refreshPage() {
 }
 
 // ==================== INIT ====================
+let autoDiscoveries = [];
+
+async function loadAutoFindings() {
+  try {
+    const resp = await fetch('data/daily-findings.json');
+    if (!resp.ok) return;
+    const findings = await resp.json();
+    if (!findings.checkedAt) return;
+
+    autoDiscoveries = findings.discoveries || [];
+    document.getElementById('autoCheckBar').style.display = 'block';
+    document.getElementById('autoCheckTime').textContent = new Date(findings.checkedAt).toLocaleDateString('zh-CN');
+    document.getElementById('autoCheckTotal').textContent = findings.totalSchools || '--';
+    document.getElementById('autoCheckFound').textContent = findings.discoveryCount || 0;
+    document.getElementById('autoCheckUnreach').textContent = findings.unreachableCount || 0;
+  } catch(e) { /* 本地打开时fetch失败，静默忽略 */ }
+}
+
 function init() {
   loadData();
 
   populateSelects();
   renderTable();
+  loadAutoFindings().then(() => renderTable());
 
   const now = new Date();
   document.getElementById('updateDate').textContent = now.toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric', weekday:'long' });

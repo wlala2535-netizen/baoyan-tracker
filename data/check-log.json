@@ -1,0 +1,186 @@
+[
+  {
+    "checkedAt": "2026-05-29T08:54:08.346Z",
+    "discoveryCount": 44,
+    "reachableCount": 102,
+    "unreachableCount": 14,
+    "discoveries": [
+      {
+        "school": "北京大学",
+        "id": "pku"
+      },
+      {
+        "school": "清华大学",
+        "id": "thu"
+      },
+      {
+        "school": "复旦大学",
+        "id": "fudan"
+      },
+      {
+        "school": "上海交通大学",
+        "id": "sjtu"
+      },
+      {
+        "school": "武汉大学",
+        "id": "whu"
+      },
+      {
+        "school": "哈尔滨工业大学",
+        "id": "hit"
+      },
+      {
+        "school": "南开大学",
+        "id": "nankai"
+      },
+      {
+        "school": "北京理工大学",
+        "id": "bit"
+      },
+      {
+        "school": "中国农业大学",
+        "id": "cau"
+      },
+      {
+        "school": "北京师范大学",
+        "id": "bnu"
+      },
+      {
+        "school": "吉林大学",
+        "id": "jlu"
+      },
+      {
+        "school": "华东师范大学",
+        "id": "ecnu"
+      },
+      {
+        "school": "华中科技大学",
+        "id": "hust"
+      },
+      {
+        "school": "四川大学",
+        "id": "scu"
+      },
+      {
+        "school": "重庆大学",
+        "id": "cqu"
+      },
+      {
+        "school": "西安交通大学",
+        "id": "xjtu"
+      },
+      {
+        "school": "西北工业大学",
+        "id": "nwpu"
+      },
+      {
+        "school": "中国海洋大学",
+        "id": "ouc"
+      },
+      {
+        "school": "电子科技大学",
+        "id": "uestc"
+      },
+      {
+        "school": "西北农林科技大学",
+        "id": "nwafu"
+      },
+      {
+        "school": "山东大学",
+        "id": "sdu"
+      },
+      {
+        "school": "湖南大学",
+        "id": "hnu"
+      },
+      {
+        "school": "中国地质大学(武汉)",
+        "id": "cug"
+      },
+      {
+        "school": "北京外国语大学",
+        "id": "bfsu"
+      },
+      {
+        "school": "上海外国语大学",
+        "id": "shisu"
+      },
+      {
+        "school": "中国传媒大学",
+        "id": "cuc2"
+      },
+      {
+        "school": "北京交通大学",
+        "id": "bjtu"
+      },
+      {
+        "school": "北京科技大学",
+        "id": "ustb"
+      },
+      {
+        "school": "河北工业大学",
+        "id": "hebut"
+      },
+      {
+        "school": "哈尔滨工程大学",
+        "id": "hrbeu"
+      },
+      {
+        "school": "东华大学",
+        "id": "dhu"
+      },
+      {
+        "school": "上海财经大学",
+        "id": "sufe"
+      },
+      {
+        "school": "南昌大学",
+        "id": "ncu"
+      },
+      {
+        "school": "中南财经政法大学",
+        "id": "zuel"
+      },
+      {
+        "school": "暨南大学",
+        "id": "jnu"
+      },
+      {
+        "school": "陕西师范大学",
+        "id": "snnu"
+      },
+      {
+        "school": "西北大学",
+        "id": "nwu"
+      },
+      {
+        "school": "新疆大学",
+        "id": "xju"
+      },
+      {
+        "school": "石河子大学",
+        "id": "shzu"
+      },
+      {
+        "school": "宁夏大学",
+        "id": "nxu"
+      },
+      {
+        "school": "广东外语外贸大学",
+        "id": "gdufs"
+      },
+      {
+        "school": "西安外国语大学",
+        "id": "xisu"
+      },
+      {
+        "school": "北京语言大学",
+        "id": "blcu"
+      },
+      {
+        "school": "浙江师范大学",
+        "id": "zjnu"
+      }
+    ]
+  }
+]

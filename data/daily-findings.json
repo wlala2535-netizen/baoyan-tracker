@@ -1,0 +1,3213 @@
+{
+  "checkedAt": "2026-05-29T08:54:08.346Z",
+  "totalSchools": 116,
+  "reachableCount": 102,
+  "unreachableCount": 14,
+  "discoveryCount": 44,
+  "discoveries": [
+    {
+      "school": "北京大学",
+      "tier": "985",
+      "id": "pku",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://grs.pku.edu.cn/",
+          "title": "北京大学研究生院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "清华大学",
+      "tier": "985",
+      "id": "thu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.tsinghua.edu.cn/",
+          "title": "清华研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "复旦大学",
+      "tier": "985",
+      "id": "fudan",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gsao.fudan.edu.cn/",
+          "title": "复旦大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        },
+        {
+          "url": "https://dfll.fudan.edu.cn/",
+          "title": "复旦大学外国语言文学学院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "上海交通大学",
+      "tier": "985",
+      "id": "sjtu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.sjtu.edu.cn/",
+          "title": "首页 - 上海交通大学研究生招生网",
+          "keywords": [
+            "夏令营",
+            "推免",
+            "预推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "武汉大学",
+      "tier": "985",
+      "id": "whu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gs.whu.edu.cn/",
+          "title": "武汉大学研究生院",
+          "keywords": [
+            "2026",
+            "暑期学校"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "哈尔滨工业大学",
+      "tier": "985",
+      "id": "hit",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.hit.edu.cn/",
+          "title": "哈尔滨工业大学-研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "南开大学",
+      "tier": "985",
+      "id": "nankai",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.nankai.edu.cn/",
+          "title": "南开大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京理工大学",
+      "tier": "985",
+      "id": "bit",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://sfl.bit.edu.cn/",
+          "title": "北理工外国语学院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "中国农业大学",
+      "tier": "985",
+      "id": "cau",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.cau.edu.cn/",
+          "title": "中国农业大学研究生院 招生",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京师范大学",
+      "tier": "985",
+      "id": "bnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.bnu.edu.cn/",
+          "title": "北京师范大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "优秀大学生"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "吉林大学",
+      "tier": "985",
+      "id": "jlu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://zsb.jlu.edu.cn/",
+          "title": "吉林大学招生网_首页",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "华东师范大学",
+      "tier": "985",
+      "id": "ecnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjszs.ecnu.edu.cn/",
+          "title": "华东师范大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "华中科技大学",
+      "tier": "985",
+      "id": "hust",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gszs.hust.edu.cn/",
+          "title": "华中科技大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "四川大学",
+      "tier": "985",
+      "id": "scu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.scu.edu.cn/",
+          "title": "首页_四川大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生",
+            "预推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "重庆大学",
+      "tier": "985",
+      "id": "cqu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.cqu.edu.cn/",
+          "title": "重庆大学研究生招生信息网（测试版）",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "西安交通大学",
+      "tier": "985",
+      "id": "xjtu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.xjtu.edu.cn/",
+          "title": "西安交通大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "西北工业大学",
+      "tier": "985",
+      "id": "nwpu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.nwpu.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免",
+            "暑期学校"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "中国海洋大学",
+      "tier": "985",
+      "id": "ouc",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.ouc.edu.cn/",
+          "title": "中国海洋大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "电子科技大学",
+      "tier": "985",
+      "id": "uestc",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.uestc.edu.cn/",
+          "title": "电子科技大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "西北农林科技大学",
+      "tier": "985",
+      "id": "nwafu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.nwsuaf.edu.cn/",
+          "title": "西北农林科技大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "山东大学",
+      "tier": "985",
+      "id": "sdu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.sdu.edu.cn/",
+          "title": "山东大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "湖南大学",
+      "tier": "985",
+      "id": "hnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "http://gra.hnu.edu.cn/",
+          "title": "湖南大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "中国地质大学(武汉)",
+      "tier": "211",
+      "id": "cug",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.cug.edu.cn/",
+          "title": "中国地质大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京外国语大学",
+      "tier": "211",
+      "id": "bfsu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://graduate.bfsu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "上海外国语大学",
+      "tier": "211",
+      "id": "shisu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.shisu.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "中国传媒大学",
+      "tier": "211",
+      "id": "cuc2",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.cuc.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京交通大学",
+      "tier": "211",
+      "id": "bjtu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gs.bjtu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京科技大学",
+      "tier": "211",
+      "id": "ustb",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzxc.ustb.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "河北工业大学",
+      "tier": "211",
+      "id": "hebut",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjs.hebut.edu.cn/",
+          "title": "河北工业大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "哈尔滨工程大学",
+      "tier": "211",
+      "id": "hrbeu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.hrbeu.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "东华大学",
+      "tier": "211",
+      "id": "dhu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjszs.dhu.edu.cn/",
+          "title": "东华大学研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "上海财经大学",
+      "tier": "211",
+      "id": "sufe",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gs.sufe.edu.cn/",
+          "title": "首页 - 上海财经大学研究生院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "南昌大学",
+      "tier": "211",
+      "id": "ncu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjsy.ncu.edu.cn/",
+          "title": "南昌大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "中南财经政法大学",
+      "tier": "211",
+      "id": "zuel",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzb.zuel.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "暨南大学",
+      "tier": "211",
+      "id": "jnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.jnu.edu.cn/",
+          "title": "研招网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "陕西师范大学",
+      "tier": "211",
+      "id": "snnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.snnu.edu.cn/",
+          "title": "陕西师范大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "西北大学",
+      "tier": "211",
+      "id": "nwu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjs.nwu.edu.cn/",
+          "title": "西北大学研究生院（党委研究生工作部）",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "新疆大学",
+      "tier": "211",
+      "id": "xju",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://gs.xju.edu.cn/",
+          "title": "新疆大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "石河子大学",
+      "tier": "211",
+      "id": "shzu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.shzu.edu.cn/",
+          "title": "石河子大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "宁夏大学",
+      "tier": "211",
+      "id": "nxu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://graduate.nxu.edu.cn/",
+          "title": "宁夏大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "广东外语外贸大学",
+      "tier": "language",
+      "id": "gdufs",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yz.gdufs.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "西安外国语大学",
+      "tier": "language",
+      "id": "xisu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzw.xisu.edu.cn/",
+          "title": "西安外国语大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "北京语言大学",
+      "tier": "language",
+      "id": "blcu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yjsy.blcu.edu.cn/",
+          "title": "北京语言大学研究生网站",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "浙江师范大学",
+      "tier": "language",
+      "id": "zjnu",
+      "foundAt": "2026-05-29T08:54:08.345Z",
+      "urls": [
+        {
+          "url": "https://yzw.zjnu.edu.cn/",
+          "title": "浙江师范大学-研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ]
+        }
+      ]
+    }
+  ],
+  "allResults": [
+    {
+      "id": "pku",
+      "name": "北京大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://grs.pku.edu.cn/",
+          "title": "北京大学研究生院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.pku.edu.cn/",
+          "title": "北京大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "thu",
+      "name": "清华大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.tsinghua.edu.cn/",
+          "title": "清华研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.dfll.tsinghua.edu.cn/",
+          "title": "清华大学外国语言文学系",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "fudan",
+      "name": "复旦大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://gsao.fudan.edu.cn/",
+          "title": "复旦大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://dfll.fudan.edu.cn/",
+          "title": "复旦大学外国语言文学学院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "sjtu",
+      "name": "上海交通大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.sjtu.edu.cn/",
+          "title": "首页 - 上海交通大学研究生招生网",
+          "keywords": [
+            "夏令营",
+            "推免",
+            "预推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.sjtu.edu.cn/",
+          "title": "首页 - 上海交通大学外国语学院",
+          "keywords": [
+            "夏令营"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nju",
+      "name": "南京大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://grawww.nju.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfs.nju.edu.cn/",
+          "title": "\n      外国语学院 \n    ",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "zju",
+      "name": "浙江大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://grs.zju.edu.cn/",
+          "error": "CERT_HAS_EXPIRED",
+          "reachable": false
+        },
+        {
+          "url": "https://www.sis.zju.edu.cn/",
+          "error": "ETIMEDOUT",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "whu",
+      "name": "武汉大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://gs.whu.edu.cn/",
+          "title": "武汉大学研究生院",
+          "keywords": [
+            "2026",
+            "暑期学校"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.fls.whu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "sysu",
+      "name": "中山大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://graduate.sysu.edu.cn/",
+          "title": "首页 | 中山大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://fls.sysu.edu.cn/",
+          "title": "中山大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "hit",
+      "name": "哈尔滨工业大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.hit.edu.cn/",
+          "title": "哈尔滨工业大学-研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nankai",
+      "name": "南开大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.nankai.edu.cn/",
+          "title": "南开大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://fcollege.nankai.edu.cn/",
+          "title": "访问出错 - 502",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "xmu",
+      "name": "厦门大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://zs.xmu.edu.cn/",
+          "title": "厦门大学招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://cflc.xmu.edu.cn/",
+          "title": "厦门大学外文学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "buaa",
+      "name": "北京航空航天大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.buaa.edu.cn/",
+          "title": "研究生招生信息网-北京航空航天大学研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://fld.buaa.edu.cn/",
+          "title": "北航外国语",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "bit",
+      "name": "北京理工大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://grd.bit.edu.cn/",
+          "title": "\n北京理工大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.bit.edu.cn/",
+          "title": "北理工外国语学院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cau",
+      "name": "中国农业大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.cau.edu.cn/",
+          "title": "中国农业大学研究生院 招生",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "bnu",
+      "name": "北京师范大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.bnu.edu.cn/",
+          "title": "北京师范大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "优秀大学生"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.sfll.bnu.edu.cn/",
+          "error": "ETIMEDOUT",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "ruc",
+      "name": "中国人民大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://pgs.ruc.edu.cn/",
+          "title": "人大研招网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://fl.ruc.edu.cn/",
+          "title": "301 Moved Permanently",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "cuc",
+      "name": "中央民族大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://grs.muc.edu.cn/",
+          "title": "中央民族大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wgy.muc.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "tju",
+      "name": "天津大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.tju.edu.cn/",
+          "title": "����ѧ�о���������",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.tju.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "dlut",
+      "name": "大连理工大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://gs.dlut.edu.cn/",
+          "title": "大连理工大学研究生院（新）",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://fld.dlut.edu.cn/",
+          "title": "大连理工大学外国语学院（新）",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "neu",
+      "name": "东北大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.neu.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://www.wgyxy.neu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "jlu",
+      "name": "吉林大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://zsb.jlu.edu.cn/",
+          "title": "吉林大学招生网_首页",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sflc.jlu.edu.cn/",
+          "title": "吉林大学外国语言文化学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "ecnu",
+      "name": "华东师范大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yjszs.ecnu.edu.cn/",
+          "title": "华东师范大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.fl.ecnu.edu.cn/",
+          "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "seu",
+      "name": "东南大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.seu.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.seu.edu.cn/",
+          "title": "东南大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "hust",
+      "name": "华中科技大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://gszs.hust.edu.cn/",
+          "title": "华中科技大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.hust.edu.cn/",
+          "title": "外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "csu",
+      "name": "中南大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://gra.csu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.csu.edu.cn/",
+          "title": "中南大学 外国语学院",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "scu",
+      "name": "四川大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.scu.edu.cn/",
+          "title": "首页_四川大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生",
+            "预推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://flc.scu.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cqu",
+      "name": "重庆大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.cqu.edu.cn/",
+          "title": "重庆大学研究生招生信息网（测试版）",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://www.cfls.cqu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "xjtu",
+      "name": "西安交通大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.xjtu.edu.cn/",
+          "title": "西安交通大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfs.xjtu.edu.cn/",
+          "title": "西安交通大学",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nwpu",
+      "name": "西北工业大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yzb.nwpu.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免",
+            "暑期学校"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wgyxy.nwpu.edu.cn/",
+          "title": "西北工业大学 外国语学院",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "lzu",
+      "name": "兰州大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.lzu.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        },
+        {
+          "url": "http://wyy.lzu.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ouc",
+      "name": "中国海洋大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.ouc.edu.cn/",
+          "title": "中国海洋大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://flc.ouc.edu.cn/",
+          "title": "中国海洋大学-外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "tongji",
+      "name": "同济大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.tongji.edu.cn/",
+          "title": "同济大学研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.tongji.edu.cn/",
+          "title": "The website is temporarily unavailable",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "uestc",
+      "name": "电子科技大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.uestc.edu.cn/",
+          "title": "电子科技大学研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.fl.uestc.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nudt",
+      "name": "国防科技大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yjszs.nudt.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "nwafu",
+      "name": "西北农林科技大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.nwsuaf.edu.cn/",
+          "title": "西北农林科技大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wyxy.nwsuaf.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "sdu",
+      "name": "山东大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "https://yz.sdu.edu.cn/",
+          "title": "山东大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://www.flc.sdu.edu.cn/",
+          "title": "山东大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "hnu",
+      "name": "湖南大学",
+      "tier": "985",
+      "urls": [
+        {
+          "url": "http://gra.hnu.edu.cn/",
+          "title": "湖南大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://english.hnu.edu.cn/",
+          "title": "外国语学院新版",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cug",
+      "name": "中国地质大学(武汉)",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.cug.edu.cn/",
+          "title": "中国地质大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wyxy.cug.edu.cn/",
+          "title": "外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "bfsu",
+      "name": "北京外国语大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.bfsu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://seis.bfsu.edu.cn/",
+          "title": "英语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "shisu",
+      "name": "上海外国语大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.shisu.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cuc2",
+      "name": "中国传媒大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.cuc.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免",
+            "优秀大学生"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.cuc.edu.cn/",
+          "title": "访问出错 - 502",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cupl",
+      "name": "中国政法大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.cupl.edu.cn/",
+          "title": "中国政法大学",
+          "keywords": [],
+          "reachable": true
+        },
+        {
+          "url": "https://fxy.cupl.edu.cn/",
+          "title": "中国政法大学",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "bfu",
+      "name": "北京林业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.bjfu.edu.cn/",
+          "title": "",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://waiyu.bjfu.edu.cn/",
+          "title": "首页 - 北京林业大学外语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "bjtu",
+      "name": "北京交通大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.bjtu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfs.bjtu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "buct",
+      "name": "北京化工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.buct.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "bupt",
+      "name": "北京邮电大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzb.bupt.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.bupt.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ustb",
+      "name": "北京科技大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzxc.ustb.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfs.ustb.edu.cn/",
+          "title": "SFS-USTB",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "cufe",
+      "name": "中央财经大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.cufe.edu.cn/",
+          "error": "EPROTO",
+          "reachable": false
+        },
+        {
+          "url": "https://sfs.cufe.edu.cn/",
+          "error": "EPROTO",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "uibe",
+      "name": "对外经济贸易大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.uibe.edu.cn/",
+          "error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+          "reachable": false
+        },
+        {
+          "url": "http://sfs.uibe.edu.cn/",
+          "title": "302 Found",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "cugb",
+      "name": "中国地质大学(北京)",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://www.cugb.edu.cn/",
+          "title": "首页-中国地质大学（北京）",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "hebut",
+      "name": "河北工业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjs.hebut.edu.cn/",
+          "title": "河北工业大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "tyut",
+      "name": "太原理工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.tyut.edu.cn/",
+          "title": "403 Forbidden",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "imu",
+      "name": "内蒙古大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.imu.edu.cn/",
+          "title": "内蒙古大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wgyxy.imu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "lnu",
+      "name": "辽宁大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://grs.lnu.edu.cn/",
+          "title": "辽宁大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://wgy.lnu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "dlu",
+      "name": "大连海事大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://grs.dlmu.edu.cn/",
+          "title": "大连海事大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.dlmu.edu.cn/",
+          "title": "大连海事大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "nenu",
+      "name": "东北师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.nenu.edu.cn/",
+          "title": "东北师范大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wy.nenu.edu.cn/",
+          "title": "外语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ybu",
+      "name": "延边大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://grad.ybu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "hrbeu",
+      "name": "哈尔滨工程大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzb.hrbeu.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://flc.hrbeu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nefu",
+      "name": "东北林业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.nefu.edu.cn/",
+          "title": "东林研究生招生信息网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "neau",
+      "name": "东北农业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.neau.edu.cn/",
+          "title": "东北农业大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "shu",
+      "name": "上海大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjszs.shu.edu.cn/",
+          "title": "上海大学研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.shu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ecust",
+      "name": "华东理工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gschool.ecust.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.ecust.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "dhu",
+      "name": "东华大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjszs.dhu.edu.cn/",
+          "title": "东华大学研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://flc.dhu.edu.cn/",
+          "title": "外语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "sufe",
+      "name": "上海财经大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.sufe.edu.cn/",
+          "title": "首页 - 上海财经大学研究生院",
+          "keywords": [
+            "2026",
+            "夏令营"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "suda",
+      "name": "苏州大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjs.suda.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://sfl.suda.edu.cn/",
+          "title": "301 Moved Permanently",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "nuaa",
+      "name": "南京航空航天大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://www.graduate.nuaa.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "njust",
+      "name": "南京理工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.njust.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "cumt",
+      "name": "中国矿业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjs.cumt.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "hhu",
+      "name": "河海大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.hhu.edu.cn/",
+          "title": "河海大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://waiyuan.hhu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "jiangnan",
+      "name": "江南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.jiangnan.edu.cn/",
+          "title": "江南大学研究生招生信息网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://foreign.jiangnan.edu.cn/",
+          "title": "外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "njau",
+      "name": "南京农业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://grasch.njau.edu.cn/",
+          "title": "南京农业大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "cpu",
+      "name": "中国药科大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.cpu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "njnu",
+      "name": "南京师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.njnu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "http://wy.njnu.edu.cn/",
+          "title": "南京师范大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ahu",
+      "name": "安徽大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graschool.ahu.edu.cn/",
+          "title": "",
+          "keywords": [],
+          "reachable": true
+        },
+        {
+          "url": "http://wgy.ahu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "hfut",
+      "name": "合肥工业大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjszs.hfut.edu.cn/",
+          "title": "合肥工业大学研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "fzu",
+      "name": "福州大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.fzu.edu.cn/",
+          "title": "福州大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://sfl.fzu.edu.cn/",
+          "title": "福州大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ncu",
+      "name": "南昌大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.ncu.edu.cn/",
+          "title": "南昌大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wgy.ncu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "zzu",
+      "name": "郑州大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "http://gs.zzu.edu.cn/",
+          "title": "302 Found",
+          "keywords": [],
+          "reachable": true
+        },
+        {
+          "url": "http://www5.zzu.edu.cn/fld/",
+          "title": "302 Found",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "henu",
+      "name": "河南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://grs.henu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://wy.henu.edu.cn/",
+          "title": "河南大学外语学院",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "whut",
+      "name": "武汉理工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gd.whut.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "http://sfl.whut.edu.cn/",
+          "error": "EAI_AGAIN",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "ccnu",
+      "name": "华中师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.ccnu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://wy.ccnu.edu.cn/",
+          "title": "华中师范大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "zuel",
+      "name": "中南财经政法大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzb.zuel.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wyxy.zuel.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "hnnu",
+      "name": "湖南师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsy.hunnu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://fsc.hunnu.edu.cn/",
+          "title": "外国语学院 - 湖南师范大学",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "jnu",
+      "name": "暨南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.jnu.edu.cn/",
+          "title": "研招网",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "scnu",
+      "name": "华南师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.scnu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://sfs.scnu.edu.cn/",
+          "error": "ECONNRESET",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "scut",
+      "name": "华南理工大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.scut.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "gxu",
+      "name": "广西大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjsc.gxu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://fls.gxu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "hainu",
+      "name": "海南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://ha.hainanu.edu.cn/gs/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "swjtu",
+      "name": "西南交通大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.swjtu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "https://sfl.swjtu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "swu",
+      "name": "西南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "http://yanzhao.swu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "http://foreign.swu.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "swufe",
+      "name": "西南财经大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.swufe.edu.cn/",
+          "title": "研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "gzu",
+      "name": "贵州大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.gzu.edu.cn/",
+          "title": "贵州大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://fl.gzu.edu.cn/",
+          "title": "外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "ynu",
+      "name": "云南大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://www.grs.ynu.edu.cn/",
+          "error": "EPROTO",
+          "reachable": false
+        },
+        {
+          "url": "http://www.sofl.ynu.edu.cn/",
+          "title": "云南大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "xdu",
+      "name": "西安电子科技大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzb.xidian.edu.cn/",
+          "error": "EAI_AGAIN",
+          "reachable": false
+        },
+        {
+          "url": "https://sfl.xidian.edu.cn/",
+          "title": "西安电子科技大学语言智能学部",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "snnu",
+      "name": "陕西师范大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.snnu.edu.cn/",
+          "title": "陕西师范大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://www.wyxy.snnu.edu.cn/",
+          "title": "外国语学院网站",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "chd",
+      "name": "长安大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yzb.chd.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        },
+        {
+          "url": "http://sfs.chd.edu.cn/",
+          "title": "长安大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "nwu",
+      "name": "西北大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjs.nwu.edu.cn/",
+          "title": "西北大学研究生院（党委研究生工作部）",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://wyxy.nwu.edu.cn/",
+          "title": " 外国语学院新版",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "xju",
+      "name": "新疆大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://gs.xju.edu.cn/",
+          "title": "新疆大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://wgyxy.xju.edu.cn/",
+          "error": "EAI_AGAIN",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "shzu",
+      "name": "石河子大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yz.shzu.edu.cn/",
+          "title": "石河子大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "nxu",
+      "name": "宁夏大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.nxu.edu.cn/",
+          "title": "宁夏大学研究生院",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "qhu",
+      "name": "青海大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://yjs.qhu.edu.cn/",
+          "title": "青海大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "utibet",
+      "name": "西藏大学",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "http://yjszs.utibet.edu.cn/",
+          "title": "301 Moved Permanently",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "upc",
+      "name": "中国石油大学(华东)",
+      "tier": "211",
+      "urls": [
+        {
+          "url": "https://graduate.upc.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "gdufs",
+      "name": "广东外语外贸大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yz.gdufs.edu.cn/",
+          "title": "研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "xisu",
+      "name": "西安外国语大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yzw.xisu.edu.cn/",
+          "title": "西安外国语大学研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "sisu",
+      "name": "四川外国语大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://graduate.sisu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "tjfsu",
+      "name": "天津外国语大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://grad.tjfsu.edu.cn/",
+          "title": "天津外国语大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "dlufl",
+      "name": "大连外国语大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://grad.dlufl.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "bisu",
+      "name": "北京第二外国语学院",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjszs.bisu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "cfau",
+      "name": "外交学院",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjsb.cfau.edu.cn/",
+          "error": "timeout",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": true
+    },
+    {
+      "id": "uir",
+      "name": "国际关系学院",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjszs.uir.cn/",
+          "title": "国际关系学院研究生招生网",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "blcu",
+      "name": "北京语言大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjsy.blcu.edu.cn/",
+          "title": "北京语言大学研究生网站",
+          "keywords": [
+            "2026",
+            "夏令营",
+            "推免"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "zjnu",
+      "name": "浙江师范大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yzw.zjnu.edu.cn/",
+          "title": "浙江师范大学-研究生招生信息网",
+          "keywords": [
+            "2026",
+            "推免"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://flc.zjnu.edu.cn/",
+          "title": "浙江师范大学外国语学院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": true,
+      "allUnreachable": false
+    },
+    {
+      "id": "hlju",
+      "name": "黑龙江大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjsy.hlju.edu.cn/",
+          "title": "黑龙江大学研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://wgy.hlju.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "shnu",
+      "name": "上海师范大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://yjsc.shnu.edu.cn/",
+          "title": "研究生院、研究生工作部",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "http://wgy.shnu.edu.cn/",
+          "error": "ENOTFOUND",
+          "reachable": false
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    },
+    {
+      "id": "cnu2",
+      "name": "首都师范大学",
+      "tier": "language",
+      "urls": [
+        {
+          "url": "https://grad.cnu.edu.cn/",
+          "title": "研究生院",
+          "keywords": [
+            "2026"
+          ],
+          "reachable": true
+        },
+        {
+          "url": "https://waiyuan.cnu.edu.cn/",
+          "title": "首师大外国语学院",
+          "keywords": [],
+          "reachable": true
+        }
+      ],
+      "hasDiscovery": false,
+      "allUnreachable": false
+    }
+  ]
+}
