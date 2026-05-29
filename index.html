@@ -160,12 +160,17 @@ td a:hover{text-decoration:underline}
 
 <div class="stats-bar" id="statsBar"></div>
 
-<div id="autoCheckBar" style="display:none;background:rgba(241,196,15,.08);border:1px solid rgba(241,196,15,.25);border-radius:var(--radius);padding:10px 20px;margin-bottom:16px;text-align:center;font-size:.84rem">
-  🤖 <strong>自动检查报告</strong>：
-  上次检查 <span id="autoCheckTime">--</span> ｜
-  扫描 <span id="autoCheckTotal">--</span> 所学校 ｜
-  🆕 发现 <span id="autoCheckFound" style="color:var(--accent);font-weight:700">--</span> 条新通知 ｜
-  ⚠️ <span id="autoCheckUnreach" style="color:var(--text-muted)">--</span> 所不可达
+<div id="autoCheckBar" style="display:none;background:rgba(241,196,15,.08);border:1px solid rgba(241,196,15,.25);border-radius:var(--radius);padding:14px 20px;margin-bottom:16px;font-size:.84rem">
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;cursor:pointer" onclick="document.getElementById('autoCheckDetail').style.display=document.getElementById('autoCheckDetail').style.display==='none'?'block':'none'">
+    <span style="font-size:1.1rem">🤖</span>
+    <strong>自动检查报告</strong>：
+    <span>上次 <span id="autoCheckTime">--</span></span>
+    <span>扫描 <span id="autoCheckTotal">--</span> 所</span>
+    <span>📋 相关公告 <span id="autoCheckTotalItems">--</span> 条</span>
+    <span style="color:var(--accent);font-weight:700">🆕 新增 <span id="autoCheckFound">--</span> 条</span>
+    <span style="font-size:.75rem;color:var(--text-muted)">▸ 点击展开详情</span>
+  </div>
+  <div id="autoCheckDetail" style="display:none;margin-top:12px;padding-top:10px;border-top:1px solid rgba(241,196,15,.15);max-height:400px;overflow-y:auto"></div>
 </div>
 
 <div class="filter-bar">
@@ -1258,10 +1263,31 @@ async function loadAutoFindings() {
 
     autoDiscoveries = findings.discoveries || [];
     document.getElementById('autoCheckBar').style.display = 'block';
-    document.getElementById('autoCheckTime').textContent = new Date(findings.checkedAt).toLocaleDateString('zh-CN');
+    document.getElementById('autoCheckTime').textContent = new Date(findings.checkedAt).toLocaleString('zh-CN');
     document.getElementById('autoCheckTotal').textContent = findings.totalSchools || '--';
-    document.getElementById('autoCheckFound').textContent = findings.discoveryCount || 0;
-    document.getElementById('autoCheckUnreach').textContent = findings.unreachableCount || 0;
+    document.getElementById('autoCheckTotalItems').textContent = findings.totalAnnouncements || 0;
+    document.getElementById('autoCheckFound').textContent = findings.newAnnouncements || 0;
+
+    // Render detailed list
+    const detail = document.getElementById('autoCheckDetail');
+    const withItems = autoDiscoveries.filter(d => d.items && d.items.length > 0);
+    if (withItems.length === 0) {
+      detail.innerHTML = '<div style="color:var(--text-muted);padding:8px">暂无新公告发现</div>';
+    } else {
+      const tierBadge = t => t === '985' ? '<span class="badge badge-985">985</span>' : t === '211' ? '<span class="badge badge-211">211</span>' : '<span class="badge badge-lang">外语类</span>';
+      detail.innerHTML = withItems.map(d => {
+        const items = (d.items || []).sort((a,b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+        return `<div style="margin-bottom:6px;padding:8px 10px;background:rgba(19,24,32,.5);border-radius:6px">
+          <div style="font-weight:600;color:var(--text-bright);margin-bottom:4px">${tierBadge(d.tier)} ${d.school} <span style="font-size:.7rem;color:var(--text-muted)">(${d.totalAnnouncements}条)</span></div>
+          ${items.slice(0, 5).map(i => `<div style="font-size:.78rem;padding:3px 0;border-bottom:1px solid rgba(30,42,58,.4)">
+            ${i.isNew ? '<span style="color:var(--accent);font-weight:600">🆕</span> ' : ''}
+            <a href="${i.url}" target="_blank" style="color:var(--primary)">${i.title}</a>
+            ${i.date ? ` <span style="color:var(--text-muted);font-size:.7rem">${i.date}</span>` : ''}
+          </div>`).join('')}
+          ${items.length > 5 ? `<div style="font-size:.7rem;color:var(--text-muted);padding-top:2px">...还有 ${items.length-5} 条</div>` : ''}
+        </div>`;
+      }).join('');
+    }
   } catch(e) { /* 本地打开时fetch失败，静默忽略 */ }
 }
 
